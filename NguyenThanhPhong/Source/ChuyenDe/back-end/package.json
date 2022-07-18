@@ -1,0 +1,22 @@
+{
+  "name": "reactjs2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "npm start --prefix ../front-end",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "bootstrap": "^5.2.0-beta1",
+    "concurrently": "^7.2.2",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.18",
+    "sequelize": "^6.21.1"
+  }
+}
