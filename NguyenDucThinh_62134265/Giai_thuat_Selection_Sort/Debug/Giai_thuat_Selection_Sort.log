@@ -1,14 +1,22 @@
 ﻿  main.cpp
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\graphics.h(281,5): warning C4273: 'getch': inconsistent dll linkage
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\graphics.h(281,5): warning C4273: 'getch': inconsistent dll linkage
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\conio.h(444,30): message : see previous definition of 'getch'
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\graphics.h(282,5): warning C4273: 'kbhit': inconsistent dll linkage
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\graphics.h(282,5): warning C4273: 'kbhit': inconsistent dll linkage
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\conio.h(450,30): message : see previous definition of 'kbhit'
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\main.cpp(558,24): warning C4101: 'j2': unreferenced local variable
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\main.cpp(558,20): warning C4101: 'j1': unreferenced local variable
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\main.cpp(558,9): warning C4101: 'j': unreferenced local variable
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\main.cpp(558,6): warning C4101: 'i': unreferenced local variable
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\main.cpp(558,16): warning C4101: 'i2': unreferenced local variable
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\main.cpp(558,12): warning C4101: 'i1': unreferenced local variable
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\main.cpp(692,15): warning C4018: '<': signed/unsigned mismatch
-D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\main.cpp(699,20): warning C4018: '<': signed/unsigned mismatch
-  Giai_thuat_Selection_Sort.vcxproj -> D:\Code\Thuc_tap\Giai_thuat_Selection_Sort\Debug\Giai_thuat_Selection_Sort.exe
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\main.cpp(531,24): warning C4101: 'j2': unreferenced local variable
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\main.cpp(531,20): warning C4101: 'j1': unreferenced local variable
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\main.cpp(531,9): warning C4101: 'j': unreferenced local variable
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\main.cpp(531,6): warning C4101: 'i': unreferenced local variable
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\main.cpp(531,16): warning C4101: 'i2': unreferenced local variable
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\main.cpp(531,12): warning C4101: 'i1': unreferenced local variable
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\main.cpp(657,15): warning C4018: '<': signed/unsigned mismatch
+E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\main.cpp(664,20): warning C4018: '<': signed/unsigned mismatch
+  LINK : E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\Debug\Giai_thuat_Selection_Sort.exe not found or not built by the last incremental link; performing full link
+graphics.lib(dibutil.obj) : warning LNK4099: PDB '' was not found with 'graphics.lib(dibutil.obj)' or at ''; linking object as if no debug info
+graphics.lib(drawing.obj) : warning LNK4099: PDB '' was not found with 'graphics.lib(drawing.obj)' or at ''; linking object as if no debug info
+graphics.lib(file.obj) : warning LNK4099: PDB '' was not found with 'graphics.lib(file.obj)' or at ''; linking object as if no debug info
+graphics.lib(misc.obj) : warning LNK4099: PDB '' was not found with 'graphics.lib(misc.obj)' or at ''; linking object as if no debug info
+graphics.lib(text.obj) : warning LNK4099: PDB '' was not found with 'graphics.lib(text.obj)' or at ''; linking object as if no debug info
+graphics.lib(winbgi.obj) : warning LNK4099: PDB '' was not found with 'graphics.lib(winbgi.obj)' or at ''; linking object as if no debug info
+graphics.lib(winthread.obj) : warning LNK4099: PDB '' was not found with 'graphics.lib(winthread.obj)' or at ''; linking object as if no debug info
+  Giai_thuat_Selection_Sort.vcxproj -> E:\GIthub\DOAN_TTCS_TTCN\NguyenDucThinh_62134265\Giai_thuat_Selection_Sort\Debug\Giai_thuat_Selection_Sort.exe

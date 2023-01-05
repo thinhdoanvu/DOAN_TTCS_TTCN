@@ -104,12 +104,6 @@ void MauSapXep()
 
 		cout << yCircleChayXuong << " " << yTextChayXuong << endl;
 	}
-	/*setcolor(RED);
-	setlinestyle(0, 0, 3);
-	circle(700, yCircleChayXuong, 40);
-	outtextxy(683, yTextChayXuong, "1");
-	circle(100, yCircleChayXuong, 40);
-	outtextxy(83, yTextChayXuong, "6");*/
 	//Chạy ngang
 	int xCircle1ChayNgang, xCircle2ChayNgang, xText1ChayNgang, xText2ChayNgang;
 	for (int i1 = 700, i2 = 100, j1 = 683, j2 = 83; i1 >= 100, i2 <= 700, j1 >= 83, j2 <= 683;i1 -= speed, i2 += speed, j1 -= speed, j2 += speed)
@@ -133,12 +127,6 @@ void MauSapXep()
 		xText2ChayNgang = j2;
 		cout << xCircle1ChayNgang << " " << xCircle2ChayNgang << " " << xText1ChayNgang << " " << xText2ChayNgang << endl;
 	}
-	/*setcolor(RED);
-	setlinestyle(0, 0, 3);
-	circle(xCircle1ChayNgang, yCircleChayXuong, 40);
-	outtextxy(xText1ChayNgang, yTextChayXuong, "1");
-	circle(xCircle2ChayNgang, yCircleChayXuong, 40);
-	outtextxy(xText2ChayNgang, yTextChayXuong, "6");*/
 	//Chạy lên
 	int yCircle1ChayLen, yCircle2ChayLen, yText1ChayLen, yText2ChayLen;
 	for (int i1 = yCircleChayXuong, i2 = yCircleChayXuong, j1 = yTextChayXuong, j2 = yTextChayXuong; i1 >= 150, i2 >= 150, j1 >= 125, j2 >= 125; i1 -= speed, i2 -= speed, j1 -= speed, j2 -= speed)
@@ -194,11 +182,6 @@ void MauSapXep()
 
 		cout << yCircleChayXuong << " " << yTextChayXuong << endl;
 	}
-	/*setcolor(RED);
-	circle(250, yCircleChayXuong, 40);
-	outtextxy(233, yTextChayXuong, "7");
-	circle(400, yCircleChayXuong, 40);
-	outtextxy(383, yTextChayXuong, "2");*/
 	//Chạy ngang
 	for (int i1 = 400, i2 = 250, j1 = 383, j2 = 233; i1 >= 250, i2 <= 400, j1 >= 233, j2 <= 383;i1 -= speed, i2 += speed, j1 -= speed, j2 += speed)
 	{
@@ -279,12 +262,6 @@ void MauSapXep()
 		yTextChayXuong = j;
 		cout << yCircleChayXuong << " " << yTextChayXuong << endl;
 	}
-	/*setcolor(RED);
-	setlinestyle(0, 0, 3);
-	circle(400, yCircleChayXuong, 40);
-	outtextxy(383, yTextChayXuong, "7");
-	circle(850, yCircleChayXuong, 40);
-	outtextxy(833, yTextChayXuong, "3");*/
 	//Chạy ngang
 	for (int i1 = 850, i2 = 400, j1 = 833, j2 = 383; i1 >= 400, i2 <= 850, j1 >= 383, j2 <= 833;i1 -= speed, i2 += speed, j1 -= speed, j2 += speed)
 	{
@@ -420,10 +397,6 @@ void MauSapXep()
 	outtextxy(xText1ChayNgang, yText1ChayLen, "4");
 	circle(xCircle2ChayNgang, yCircle2ChayLen, 40);
 	outtextxy(xText2ChayNgang, yText2ChayLen, "8");
-
-	//Tiến hành sắp xếp số 6
-
-	//Tiến hành sắp xếp số 7
 
 	//Tiến hành sắp xếp số 9 và 8
 	//Chạy xuống
@@ -672,14 +645,6 @@ void MauTuNhap()
 		circle(xCircle[i], yCircle[i], radius);
 	settextstyle(DEFAULT_FONT, HORIZ_DIR, 16);
 	setcolor(RED);
-	/*outtextxy( 72, 129, array_element[0]);
-	outtextxy(222, 129, array_element[1]);
-	outtextxy(372, 129, array_element[2]);
-	outtextxy(522, 129, array_element[3]);
-	outtextxy(672, 129, array_element[4]);
-	outtextxy(822, 129, array_element[5]);
-	outtextxy(972, 129, array_element[6]);
-	outtextxy(1122, 129, array_element[7]);*/
 	int xNumber[8] = { 72,222,372,522,672,822,972,1122 },
 		yNumber[8] = { 129,129,129,129,129,129,129,129 };
 	for (int i = 0;i < 8;i++)
@@ -1282,11 +1247,6 @@ void screen()
 {
 	initwindow(1270, 600, "Chuong trinh mo phong giai thuat Selection Sort");
 	trang_bia();
-	//moPhongTuNhap();
-	//menu();
-	//moPhongMau();
-	//caiDat();
-	
 	closegraph();
 }
 
