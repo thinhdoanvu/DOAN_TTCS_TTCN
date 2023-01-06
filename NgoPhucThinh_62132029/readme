@@ -1,8 +1,0 @@
-
-echo "# DOAN_TTCS_TTCN-NgoPhucThinh_62132029-cocaro" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/phucthinh3006/DOAN_TTCS_TTCN-NgoPhucThinh_62132029-cocaro.git
-git push -u origin main
