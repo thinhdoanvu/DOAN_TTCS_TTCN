@@ -1,0 +1,103 @@
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe.config
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\bin\Debug\Caro_Game.pdb
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.Properties.Resources.resources
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.exe
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.pdb
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormMenu.resources
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormName.resources
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormPlayGame.resources
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\bin\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\Desktop\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.ResolveComReference.cache
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe.config
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.pdb
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Interop.WMPLib.dll
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\AxInterop.WMPLib.dll
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csprojAssemblyReference.cache
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Interop.WMPLib.dll
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\AxInterop.WMPLib.dll
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.ResolveComReference.cache
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormMenu.resources
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormName.resources
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormPlayGame.resources
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.Properties.Resources.resources
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.GenerateResource.cache
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.CoreCompileInputs.cache
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.exe
+E:\Bài tập tự học\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.pdb
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe.config
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.pdb
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Interop.WMPLib.dll
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\bin\Debug\AxInterop.WMPLib.dll
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csprojAssemblyReference.cache
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Interop.WMPLib.dll
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\AxInterop.WMPLib.dll
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.ResolveComReference.cache
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormMenu.resources
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormName.resources
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormPlayGame.resources
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.Properties.Resources.resources
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.GenerateResource.cache
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.CoreCompileInputs.cache
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.exe
+E:\Ex_Other\C#\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.pdb
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe.config
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Caro_Game.pdb
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\bin\Debug\Interop.WMPLib.dll
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\bin\Debug\AxInterop.WMPLib.dll
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csprojAssemblyReference.cache
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Interop.WMPLib.dll
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\AxInterop.WMPLib.dll
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.ResolveComReference.cache
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormMenu.resources
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormName.resources
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormPlayGame.resources
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.Properties.Resources.resources
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.GenerateResource.cache
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.CoreCompileInputs.cache
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.exe
+D:\Nam\Project_Wf\Caro_Game\Caro_Game\obj\Debug\Caro_Game.pdb
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csprojAssemblyReference.cache
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Interop.WMPLib.dll
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\AxInterop.WMPLib.dll
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.ResolveComReference.cache
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormMenu.resources
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormName.resources
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.FormPlayGame.resources
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.Properties.Resources.resources
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.GenerateResource.cache
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.csproj.CoreCompileInputs.cache
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.exe
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\obj\Debug\Caro_Game.pdb
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe.config
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\bin\Debug\Caro_Game.exe
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\bin\Debug\Caro_Game.pdb
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\bin\Debug\Interop.WMPLib.dll
+D:\OneDrive\OneDrive - Ho Chi Minh city University of Food Industry\MyData\IT\Project_C#\Caro_Game\Caro_Game\bin\Debug\AxInterop.WMPLib.dll
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\bin\Debug\Caro_Game.exe.config
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\bin\Debug\Caro_Game.exe
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\bin\Debug\Caro_Game.pdb
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\bin\Debug\Interop.WMPLib.dll
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\bin\Debug\AxInterop.WMPLib.dll
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Interop.WMPLib.dll
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\AxInterop.WMPLib.dll
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.csproj.ResolveComReference.cache
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.FormMenu.resources
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.FormName.resources
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.FormPlayGame.resources
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.Properties.Resources.resources
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.csproj.GenerateResource.cache
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.csproj.CoreCompileInputs.cache
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.exe
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.pdb
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.csproj.AssemblyReference.cache
+D:\cocaro\Game-Caro-master\Game-Caro-master\Caro_Game\obj\Debug\Caro_Game.FormAbout.resources
