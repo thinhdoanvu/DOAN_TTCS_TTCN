@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Trả phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using QLKS.Models
+@model List<tblHoaDon>
+
+<!-- SSS -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">Trả phòng</li>
+</ol>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Danh sách phòng đang sử dụng
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+
+            <!-- /SSS -->
+            <table class="table table-bordered table-striped table-hover" id="dataTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>SP</th>
+                        <th>Loại phòng</th>
+                        <th>Tầng</th>
+                        <th>Ngày vào</th>
+                        <th>Ngày ra</th>
+                        <th>Tình trạng</th>
+                        <th>Option</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>SP/th>
+                        <th>Loại phòng</th>
+                        <th>Tầng</th>
+                        <th>Ngày vào</th>
+                        <th>Ngày ra</th>
+                        <th>Tình trạng</th>
+                        <th>Option</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                    <tr>
+                        <td>@item.tblPhieuDatPhong.tblPhong.so_phong</td>
+                        <td>@item.tblPhieuDatPhong.tblPhong.tblLoaiPhong.mo_ta</td>
+                        <td>@item.tblPhieuDatPhong.tblPhong.tblTang.ten_tang</td>
+                        <td>@item.tblPhieuDatPhong.ngay_vao.Value.ToShortDateString()</td>
+                        <td>@item.tblPhieuDatPhong.ngay_ra.Value.ToShortDateString()</td>
+                        <td><span class="badge badge-danger badge-g">@item.tblPhieuDatPhong.tblPhong.tblTinhTrangPhong.mo_ta</span></td>
+                        <td>
+                            <a href="@Url.Action("ThanhToan","HoaDon",new { id = item.ma_hd})"><div class="btn btn-danger badge-g">Trả phòng</div></a>
+                            <a href="@Url.Action("GiaHanPhong","HoaDon",new { id = item.ma_hd})"><div class="btn btn-info badge-g">Gia Hạn</div></a>
+                            <a href="@Url.Action("DoiPhong","HoaDon",new { id = item.ma_hd})"><div class="btn btn-secondary badge-g">Đổi phòng</div></a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at ... PM</div>
+</div>

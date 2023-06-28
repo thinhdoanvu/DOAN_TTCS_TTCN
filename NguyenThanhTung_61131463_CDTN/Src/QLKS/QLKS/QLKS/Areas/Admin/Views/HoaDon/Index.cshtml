@@ -1,0 +1,146 @@
+﻿@model IEnumerable<QLKS.Models.tblHoaDon>
+
+@{
+    ViewBag.Title = "Danh sách hóa đơn";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">@ViewBag.Title</li>
+</ol>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> @ViewBag.Title
+    </div>
+    <div class="container">
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="date_start">Từ ngày</label>
+                    @Html.TextBox("beginDate", null, new { @type = "date", @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    <label for="date_end">Tới ngày</label>
+                    @Html.TextBox("endDate", null, new { @type = "date", @class = "form-control" })
+                </div>
+                <div class="col-md-2">
+                    <label for="date_end" style="visibility:hidden">End Date</label>
+                    <input type="submit" onclick="return checkday()" class="btn btn-primary btn-block" value="Lọc hóa đơn">
+                </div>
+            </div>
+        }
+    </div>
+    <hr />
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Mã hóa đơn
+                        </th>
+                        <th>
+                            Số phòng
+                        </th>
+                        <th>
+                            Tên khách hàng
+                        </th>
+                        <th>
+                            Ngày vào
+                        </th>
+                        <th>
+                            Ngày dự kiến trả phòng
+                        </th>
+                        <th>
+                            Ngày trả phòng
+                        </th>
+                        <th>
+                            Tiền phòng
+                        </th>
+                        <th>
+                            Tiền dịch vụ
+                        </th>
+                        <th>
+                            Phụ thu
+                        </th>
+                        <th>
+                            Tổng tiền
+                        </th>
+                        <th>
+                            Tình trạng
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ma_hd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tblPhieuDatPhong.tblPhong.so_phong)
+                            </td>
+                            <td>
+                                @if (item.tblPhieuDatPhong.ma_kh == null)
+                                {
+                                    try
+                                    {
+                                        List<QLKS.Areas.Admin.Models.KhachHang> dskh = Newtonsoft.Json.JsonConvert.DeserializeObject<List<QLKS.Areas.Admin.Models.KhachHang>>(item.tblPhieuDatPhong.thong_tin_khach_thue);
+                                        for (var i = 1; i < dskh.Count; i++)
+                                        {
+                                            @dskh[i].hoten
+                                        }
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                }
+                                else
+                                {
+                                    @Html.DisplayFor(modelItem => item.tblPhieuDatPhong.tblKhachHang.ho_ten)
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tblPhieuDatPhong.ngay_vao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tblPhieuDatPhong.ngay_ra)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ngay_tra_phong)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tien_phong)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tien_dich_vu)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.phu_thu)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tong_tien)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tblTinhTrangHoaDon.mo_ta)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Chi tiết", "ThanhToan", new { id = item.ma_hd })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <div class="alert alert-success">Tổng doanh thu bằng @ViewBag.tong_tien VND </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at @DateTime.Now</div>
+</div>

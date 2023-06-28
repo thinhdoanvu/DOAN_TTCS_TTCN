@@ -1,0 +1,254 @@
+﻿@{
+    ViewBag.Title = "G-Hotel Khách sạn hàng đầu Việt Nam";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(/Content/Home/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-left">
+
+
+                <div class="row row-mt-15em">
+                    <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                        <span class="intro-text-small">Khách sạn đạt chuẩn 5 sao tại Việt Nam !</span>
+                        <h1 class="cursive-font">The best 5 star hotel in VietNam!</h1>
+                    </div>
+                    <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+                        <div class="form-wrap">
+                            <div class="tab">
+
+                                <div class="tab-content">
+                                    <div class="tab-content-inner active" data-content="signup">
+                                        <h3 class="cursive-font">Reservation</h3>
+                                        @using (Html.BeginForm("FindRoom","Home"))
+                                        {
+                                            @*<div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="activities">Type Room</label>
+                                                    <select name="#" id="activities" class="form-control">
+                                                        <option value="">All</option>
+                                                        <option value="">Phòng đơn</option>
+                                                        <option value="">Phòng đôi</option>
+                                                        <option value="">Phòng VIP</option>
+                                                    </select>
+                                                </div>
+                                            </div>*@
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="date_start">Check-in</label>
+                                                    @Html.TextBox("datestart", null,new { @class= "form-control" })
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="date_end">Check-out</label>
+                                                    @Html.TextBox("dateend", null, new { @class = "form-control" })
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <input type="submit" onclick="return checkday()" class="btn btn-primary btn-block" value="Book Now">
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="gtco-section">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                <h2 class="cursive-font primary-color">Information</h2>
+                <p>Khách sạn G-Hotel TP Nha Trang. Từ khách sạn, quý khách chỉ đi mất 30 phút để đên sân bay và 5 phút để đi vào trung tâm thành phố.</p>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a href="~/Content/Home/images/img_1.jpg" class="fh5co-card-item image-popup">
+                    <figure>
+                        <div class="overlay"><i class="ti-plus"></i></div>
+                        <img src="~/Content/Home/images/img_1.jpg" alt="Image" class="img-responsive">
+                    </figure>
+                    <div class="fh5co-text">
+                        <h2>Phòng ở</h2>
+                        <p>Khách sạn G-Hotel với nhiều phòng có sức chứa khác nhau, đáp ứng từng yêu cầu của quý khách hàng.</p>
+                        <p><span class="price cursive-font"></span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a href="~/Content/Home/images/img_2.jpg" class="fh5co-card-item image-popup">
+                    <figure>
+                        <div class="overlay"><i class="ti-plus"></i></div>
+                        <img src="~/Content/Home/images/img_2.jpg" alt="Image" class="img-responsive">
+                    </figure>
+                    <div class="fh5co-text">
+                        <h2>Không gian</h2>
+                        <p>Từ khách sạn Quý khách có thể bao quát được toàn cảnh thành phố hay thư giãn trong không gian tươi tốt của khu vườn.</p>
+                        <p><span class="price cursive-font"></span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a href="~/Content/Home/images/img_3.jpg" class="fh5co-card-item image-popup">
+                    <figure>
+                        <div class="overlay"><i class="ti-plus"></i></div>
+                        <img src="~/Content/Home/images/img_3.jpg" alt="Image" class="img-responsive">
+                    </figure>
+                    <div class="fh5co-text">
+                        <h2>Trải nghiệm</h2>
+                        <p>Là địa điểm lý tưởng để quý khách lưu lại trong những chuyến công tác dài ngày hoặc để cảm nhận 1 cảm giác khác biệt ngay trong thành phố.</p>
+                        <p><span class="price cursive-font"></span></p>
+
+                    </div>
+                </a>
+            </div>
+
+
+           
+        </div>
+    </div>
+</div>
+
+<div id="gtco-features">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                <h2 class="cursive-font">Our Services</h2>
+                <p>Dịch vụ chuyên nghiệp, đa dạng có thể làm hài lòng mọi khách hàng tới khách sạn G-Hotel.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                    <span class="icon">
+                        <i class="ti-face-smile"></i>
+                    </span>
+                    <h3>Happy People</h3>
+                    <p>Nhân viên thân thiện, tận tình, sẵn sàng hỗ trợ mọi yêu cầu của khách hàng sẽ khiến bạn không hề thất vọng.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                    <span class="icon">
+                        <i class="ti-thought"></i>
+                    </span>
+                    <h3>Rating</h3>
+                    <p>Phòng ở thoáng đãng sạch sẽ, đa tiện nghi giúp bạn có những phút giây nghỉ ngơi thoải mái nhất.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                    <span class="icon">
+                        <i class="ti-truck"></i>
+                    </span>
+                    <h3>Food</h3>
+                    <p>Dịch vụ đồ ăn đa dạng, phong phú. Thay đổi liên tục giúp bạn được trải nghiệm ẩm thực một cách tuyệt vời nhất.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="gtco-cover gtco-cover-sm" style="background-image: url(/Content/Home/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="gtco-container text-center">
+        <div class="display-t">
+            <div class="display-tc">
+                <h1>&ldquo; Their quality of service makes me come back over and over again!&rdquo;</h1>
+                <p>&mdash; Tung, CEO of Microsoft Co.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="gtco-counter" class="gtco-section">
+    <div class="gtco-container">
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                <h2 class="cursive-font primary-color">Fun Facts</h2>
+                <p>Khách sạn đưa vào hoạt động từ năm 2022, đã phục vụ hơn 100.000 lượt khách.</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="feature-center">
+                    <span class="counter js-counter" data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">Avg. Rating</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="feature-center">
+                    <span class="counter js-counter" data-from="0" data-to="48" data-speed="5000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">Rooms</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="feature-center">
+                    <span class="counter js-counter" data-from="0" data-to="72" data-speed="5000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">Food type</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+                <div class="feature-center">
+                    <span class="counter js-counter" data-from="0" data-to="1996" data-speed="5000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">Year Started</span>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    function checkday() {
+        var from1 = $("#datestart").val().split("/");
+        var dateS = new Date(from1[2], from1[1] - 1, from1[0]);
+        var from2 = $("#dateend").val().split("/");
+        var dateE = new Date(from2[2], from2[1] - 1, from2[0]);
+
+        var now = new Date();
+        now.setHours(0);
+        now.setSeconds(0);
+        now.setMinutes(0);
+        now.setMilliseconds(0);
+        
+        if (dateS < now) {
+            alert("Ngày vào lớn hơn hoặc bằng ngày hiện tại !");
+            return false;
+        }
+        if (dateE <= dateS) {
+            alert("Ngày ra phải lớn hơn ngày vào ít nhất 1 ngày !");
+            return false;
+        }
+        if (from1 == "" || from2 == "") {
+            alert("Ngày tháng không được để trống !");
+            return false;
+        }
+        return true;
+    }
+</script>

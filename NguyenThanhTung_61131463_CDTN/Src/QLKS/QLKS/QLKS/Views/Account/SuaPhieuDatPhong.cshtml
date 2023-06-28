@@ -1,0 +1,104 @@
+﻿@model QLKS.Models.tblPhieuDatPhong
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header id="gtco-header" class="gtco-cover gtco-cover-md g-header" role="banner" style="background-image: url(/Content/Home/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+</header>
+<div class="container">
+    <br /><br /><br /><br />
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.ma_pdp)
+            @Html.HiddenFor(model => model.ma_kh)
+            <div class="form-group">
+                @Html.Label("Tên khách hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.tblKhachHang.ho_ten, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.ngay_dat, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Ngày đặt", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ngay_dat, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.ngay_dat, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Ngày vào", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.ngay_vao, new { @type = "date", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ngay_vao, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Ngày ra", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.ngay_ra, new { @type = "date", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ngay_ra, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Số phòng", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("ma_phong", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ma_phong, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" onclick="return checkday()" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+
+<script src="~/Content/Home/js/main.js"></script>
+<script>
+    function checkday() {
+        var from1 = $("#ngay_vao").val().split("/");
+        var dateS = new Date(from1[2], from1[1] - 1, from1[0]);
+        var from2 = $("#ngay_ra").val().split("/");
+        var dateE = new Date(from2[2], from2[1] - 1, from2[0]);
+
+        var now = new Date();
+        now.setHours(0);
+        now.setSeconds(0);
+        now.setMinutes(0);
+        now.setMilliseconds(0);
+
+        if (dateS < now) {
+            alert("Ngày vào lớn hơn hoặc bằng ngày hiện tại !");
+            return false;
+        }
+        if (dateE <= dateS) {
+            alert("Ngày ra phải lớn hơn ngày vào ít nhất 1 ngày !");
+            return false;
+        }
+        if (from1 == "" || from2 == "") {
+            alert("Ngày tháng không được để trống !");
+            return false;
+        }
+        return true;
+    }
+</script>

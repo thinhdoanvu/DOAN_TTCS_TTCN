@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLKS", "QLKS\QLKS.csproj", "{26A999F6-CCC7-4A93-BD51-EAC9D95F78B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26A999F6-CCC7-4A93-BD51-EAC9D95F78B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26A999F6-CCC7-4A93-BD51-EAC9D95F78B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26A999F6-CCC7-4A93-BD51-EAC9D95F78B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26A999F6-CCC7-4A93-BD51-EAC9D95F78B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B911166-E059-43E0-8FA8-70419D65F648}
+	EndGlobalSection
+EndGlobal

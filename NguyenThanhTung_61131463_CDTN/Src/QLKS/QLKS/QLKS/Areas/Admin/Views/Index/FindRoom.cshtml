@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Chọn ngày đặt";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">Chọn ngày đặt</li>
+</ol>
+<div class="container">
+    <br /><br /><br /><br />
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Chọn ngày đặt</h3>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("SelectRoom", "PhieuDatPhong"))
+            {
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="date_start">Ngày vào</label>
+                        @Html.TextBox("datestart", DateTime.Now.ToShortDateString(), new { @class = "form-control", @readonly = "readonly" })
+                    </div>
+                    <div class="col-md-3">
+                        <label for="date_end">Ngày trả phòng</label>
+                        @Html.TextBox("dateE", null, new { @type = "date", @class = "form-control" })
+                    </div>
+                    <div class="col-md-2">
+                        <label for="date_end" style="visibility:hidden">End Date</label>
+                        <input type="submit" class="btn btn-primary btn-block" onclick="return checkday()" value="Tìm phòng">
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<script>
+    function checkday() {
+        var from2 = $("#dateE").val();
+        var dateE = new Date(from2);
+        dateE.setHours(0);
+
+        var now = new Date();
+        now.setHours(0);
+        now.setSeconds(0);
+        now.setMinutes(0);
+        now.setMilliseconds(0);
+        if (dateE <= now) {
+            alert("Ngày ra phải lớn hơn ngày vào ít nhất 1 ngày !");
+            return false;
+        }
+        if (from2 == "") {
+            alert("Ngày tháng không được để trống !");
+            return false;
+        }
+        return true;
+    }
+</script>
+

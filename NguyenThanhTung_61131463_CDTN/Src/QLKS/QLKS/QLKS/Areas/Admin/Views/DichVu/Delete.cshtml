@@ -1,0 +1,61 @@
+﻿@model QLKS.Models.tblDichVu
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">@ViewBag.title</li>
+</ol>
+
+<h3>Bạn có chắc chắn muốn xóa ?</h3>
+<div>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="@Html.DisplayFor(model => model.anh)" style="width:100%;max-width:200px" />
+            </div>
+            <div class="col-md-5">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Tên dịch vụ
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ten_dv)
+                    </dd>
+
+                    <dt>
+                        Giá
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.gia)
+                    </dd>
+
+                    <dt>
+                        Đơn vị
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.don_vi)
+                    </dd>
+
+                </dl>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                }
+            </div>
+        </div>
+    </div><hr/>
+        <div class="form-actions no-color">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+</div>

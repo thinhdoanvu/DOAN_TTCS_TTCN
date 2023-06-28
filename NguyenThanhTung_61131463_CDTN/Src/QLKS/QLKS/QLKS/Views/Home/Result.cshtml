@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="gtco-header" class="gtco-cover gtco-cover-md g-header" role="banner" style="background-image: url(/Content/Home/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+</header>
+<div class="container">
+    <br/><br/><br/><h2></h2>
+    @{
+        if (ViewBag.result == "success")
+        {
+            <div class="alert alert-success" role="alert">
+                <h2 style="color:#3c763d">Đã đặt phòng thành công.</h2>
+                Cảm ơn bạn đã đặt phòng tại G-Hotel.
+            </div>
+            <div class="alert alert-warning" role="alert"> Nếu quá 12h kể từ @ViewBag.ngay_vao, phiếu đặt phòng sẽ bị hủy.<br /> Vui lòng tới khách sạn nhận phòng đúng thời gian đã đặt !</div>
+        }
+        else
+        {
+            <div class="alert alert-danger" role="alert">Có lỗi trong quá trình đặt phòng. Bạn có thể liên hệ nhân viên phòng để giải quyết vấn đề !</div>
+        }
+    }
+    <a href="@Url.Action("Index","Home")">Back to Home</a> | <a href="@Url.Action("BookRoom","Home")">Phòng đã đặt</a>
+    <br/><br/>
+</div>
+

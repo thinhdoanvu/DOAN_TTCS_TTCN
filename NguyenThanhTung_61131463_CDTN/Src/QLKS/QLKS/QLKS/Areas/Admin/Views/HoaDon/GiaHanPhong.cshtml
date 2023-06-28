@@ -1,0 +1,82 @@
+﻿@model QLKS.Models.tblPhieuDatPhong
+
+@{
+    ViewBag.Title = "Gia Hạn Phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("ListPhongDangHoatDong","Admin")">Phòng đang hoạt động</a>
+    </li>
+    <li class="breadcrumb-item active">Gia hạn phòng @Model.tblPhong.so_phong</li>
+</ol>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Gia Hạn Phòng @Model.tblPhong.so_phong
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm("ResultGiaHan", "HoaDon"))
+        {
+        if (ViewBag.dateMax != null)
+        {
+            <div class="alert alert-warning"><b> Ngày trả phòng không được quá @ViewBag.dateMax </b></div>
+        }
+        <div class="alert alert-info"><b> Phòng @Model.tblPhong.so_phong đang được dự kiến trả phòng vào ngày @Model.ngay_ra </b></div>
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.ma_pdp)
+    <div class="row">
+        <div class="col-md-3">
+            <label for="date_start">Ngày vào</label>
+            @Html.TextBoxFor(m => m.ngay_vao, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        <div class="col-md-3">
+            <label for="date_end">Ngày trả phòng</label>
+            @Html.TextBoxFor(m => m.ngay_ra, new { @type = "date", @class = "form-control" })
+        </div>
+        <div class="col-md-2">
+            <label for="date_end" style="visibility:hidden">End Date</label>
+            <input type="submit" class="btn btn-primary btn-block" onclick="return checkday()" value="Gia hạn">
+        </div>
+    </div>
+}
+    </div>
+    </div>
+<script>
+    function checkday() {
+        var from1 = $("#ngay_vao").val();
+        var dateS = new Date(from1);
+
+        var from2 = $("#ngay_ra").val();
+        var dateE = new Date(from2);
+
+        var dateMax = new Date('@ViewBag.dateMax');
+        dateE.setHours(0);
+
+        var now = new Date();
+        now.setHours(0);
+        now.setSeconds(0);
+        now.setMinutes(0);
+        now.setMilliseconds(0);
+        if (dateE <= dateS) {
+            alert("Ngày ra phải lớn hơn ngày vào ít nhất 1 ngày !");
+            return false;
+        }
+        if (dateE < now) {
+            alert("Ngày ra phải lớn hơn hiện tại!");
+            return false;
+        }
+        if (dateE > dateMax) {
+            alert("Ngày ra không được quá ngày @ViewBag.dateMax");
+            return false;
+        }
+        if (from2 == "") {
+            alert("Ngày tháng không được để trống !");
+            return false;
+        }
+        return true;
+    }
+</script>

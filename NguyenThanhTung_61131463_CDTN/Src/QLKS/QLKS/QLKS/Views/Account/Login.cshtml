@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+@model QLKS.Models.tblKhachHang
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login</title>
+    <link href="~/Content/Admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Admin/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Login</div>
+            <div class="card-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Username</label>
+                        @Html.TextBoxFor(u => u.ma_kh, null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(u => u.ma_kh)
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        @Html.PasswordFor(u => u.mat_khau, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(u => u.mat_khau)
+                    </div>
+                    <input class="btn btn-primary btn-block" type="submit" value="Log In" />
+                }
+                <br />
+                <div>
+                    Bạn chưa có tài khoản
+                </div>
+                <a href="@Url.Action("Register", "Account")"><input class="btn btn-success btn-block" value="Register" /></a>
+                <br />
+                <a href="@Url.Action("Index","Home")">Back to Home</a>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="~/Content/Admin/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>

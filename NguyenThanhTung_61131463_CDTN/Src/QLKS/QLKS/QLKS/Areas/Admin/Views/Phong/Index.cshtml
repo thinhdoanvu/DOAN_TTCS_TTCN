@@ -1,0 +1,81 @@
+﻿@model IEnumerable<QLKS.Models.tblPhong>
+
+@{
+    ViewBag.Title = "Danh sách phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">Danh sách phòng</li>
+</ol>
+<p>
+    @Html.ActionLink("Thêm phòng", "Create")
+</p>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Danh sách phòng
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover" id="dataTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            @Html.DisplayName("Số phòng")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Loại phòng")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Tầng")
+                        </th>
+                        @if (Session["NV"] != null && ((QLKS.Models.tblNhanVien)Session["NV"]).ma_chuc_vu <= 2)
+                        {
+                            <th></th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @{
+                                String m = (item.tblLoaiPhong.anh);
+                                try
+                                {
+                                    List<String> a = Newtonsoft.Json.JsonConvert.DeserializeObject<List<String>>(m);
+                                    <div><img src="@a[0]" height="50px"/></div>
+                                }
+                                catch { }
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.so_phong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tblLoaiPhong.mo_ta)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tblTang.ten_tang)
+                        </td>
+                        @if (Session["NV"] != null && ((QLKS.Models.tblNhanVien)Session["NV"]).ma_chuc_vu <= 2)
+    {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ma_phong }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ma_phong })
+                    </td>
+}
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at @DateTime.Now</div>
+</div>
+

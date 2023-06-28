@@ -1,0 +1,51 @@
+﻿@model QLKS.Models.tblPhong
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblPhong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.so_phong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.so_phong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblLoaiPhong.mo_ta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblLoaiPhong.mo_ta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblTang.ten_tang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblTang.ten_tang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblTinhTrangPhong.mo_ta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblTinhTrangPhong.mo_ta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ma_phong }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

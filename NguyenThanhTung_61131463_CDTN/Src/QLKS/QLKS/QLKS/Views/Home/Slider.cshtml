@@ -1,0 +1,90 @@
+﻿@model QLKS.Models.tblLoaiPhong
+@{
+    ViewBag.Title = "Slider";
+    Layout = null;
+}
+<link href="~/Content/Slider/ninja-slider.css" rel="stylesheet" />
+<script src="~/Content/Slider/ninja-slider.js"></script>
+
+<style>
+
+    ul li {
+        padding: 10px 0;
+    }
+
+    header {
+        display: block;
+        padding: 60px 0 10px;
+        background-color: #191919;
+        text-align: center;
+    }
+
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #4d5256;
+            text-decoration: none;
+            transition: color 0.7s;
+        }
+
+            header a.active {
+                font-weight: bold;
+                width: 24px;
+                height: 24px;
+                padding: 4px;
+                text-align: center;
+                display: inline-block;
+                border-radius: 50%;
+                background: #4d5256;
+                color: #191919;
+            }
+
+    .gallery img {
+        width: 179px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    @{
+        String m = (Model.anh);
+        try
+        {
+            List<String> a = Newtonsoft.Json.JsonConvert.DeserializeObject<List<String>>(m);
+            <div style="display:none;">
+                <div id="ninja-slider">
+                    <div class="slider-inner">
+                        <ul>
+                            @foreach (var i in a)
+                            {
+                                <li><a class="ns-img" href="@i"></a></li>
+                            }
+                        </ul>
+
+                        <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+                    </div>
+                </div>
+            </div>
+        }
+        catch { }
+    }
+    <script>
+        function lightbox(idx) {
+            var ninjaSldr = document.getElementById("ninja-slider");
+            ninjaSldr.parentNode.style.display = "block";
+
+            nslider.init(idx);
+
+
+            var fsBtn = document.getElementById("fsBtn");
+            fsBtn.click();
+        }
+        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+            if (isFullscreen) {
+                ninjaSldr.parentNode.style.display = "none";
+            }
+        }
+        lightbox(0);
+    </script>
+</body>

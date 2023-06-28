@@ -1,0 +1,160 @@
+﻿@model QLKS.Models.tblPhieuDatPhong
+
+@{
+    ViewBag.Title = "Nhận Phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">Thông tin phiếu đặt phòng</li>
+</ol>
+<div class="container">
+
+    @using (Html.BeginForm("Result", "HoaDon"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.ma_pdp)
+        @Html.HiddenFor(model => model.ma_kh)
+        @Html.HiddenFor(model => model.ma_phong)
+        <div class="form-horizontal">
+            <h4>Phiếu đặt phòng</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.Label("Họ tên", htmlAttributes: new { @class = "control-label col-md-4" })
+                        @if (Model.ma_kh == null)
+            {
+                try
+                {
+                    List<QLKS.Areas.Admin.Models.KhachHang> likh = Newtonsoft.Json.JsonConvert.DeserializeObject<List<QLKS.Areas.Admin.Models.KhachHang>>(Model.thong_tin_khach_thue);
+                    <div class="col-md-12">
+                        @Html.TextBox("hoten", likh[0].hoten, new { @class = "form-control", @readonly = "readonly" })
+                    </div>
+    }
+    catch { }
+}
+else
+{
+            <div class="col-md-12">
+                @Html.TextBoxFor(u => u.tblKhachHang.ho_ten, null, new { @class = "form-control", @readonly = "readonly" })
+            </div>
+}
+                    </div>
+                    @if (Model.ngay_dat != null)
+        {
+            <div class="form-group">
+                @Html.Label("Ngày đặt", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-12">
+                    @Html.TextBoxFor(u => u.ngay_dat, null, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+}
+                    <div class="form-group">
+                        @Html.Label("Ngày vào", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(u => u.ngay_vao, null, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Ngày ra", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(u => u.ngay_ra, null, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.Label("Số phòng", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(u => u.tblPhong.so_phong, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <h3 style="line-height:70px">Thông tin khách đi cùng</h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                @Html.Label("Họ tên", htmlAttributes: new { @class = "control-label col-md-12" })
+                                <div class="col-md-12">
+                                    @Html.TextBox("hoten1", null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            @Html.Label("Tuổi", htmlAttributes: new { @class = "control-label col-md-12" })
+                            <div class="col-md-12">
+                                @Html.TextBox("tuoi1", 18, new { @class = "form-control", type = "number" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                @Html.Label("Họ tên", htmlAttributes: new { @class = "control-label col-md-12" })
+                                <div class="col-md-12">
+                                    @Html.TextBox("hoten2", null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            @Html.Label("Tuổi", htmlAttributes: new { @class = "control-label col-md-12" })
+                            <div class="col-md-12">
+                                @Html.TextBox("tuoi2", 18, new { @class = "form-control", type = "number" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                @Html.Label("Họ tên", htmlAttributes: new { @class = "control-label col-md-12" })
+                                <div class="col-md-12">
+                                    @Html.TextBox("hoten3", null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            @Html.Label("Tuổi", htmlAttributes: new { @class = "control-label col-md-12" })
+                            <div class="col-md-12">
+                                @Html.TextBox("tuoi3", 12, new { @class = "form-control", type = "number" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                @Html.Label("Họ tên", htmlAttributes: new { @class = "control-label col-md-12" })
+                                <div class="col-md-12">
+                                    @Html.TextBox("hoten4", null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            @Html.Label("Tuổi", htmlAttributes: new { @class = "control-label col-md-12" })
+                            <div class="col-md-12">
+                                @Html.TextBox("tuoi4", 12, new { @class = "form-control", type = "number" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-12">
+                        <input type="submit" value="Nhận phòng" class="btn btn-success btn-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to Home", "Index")
+    </div>
+</div>

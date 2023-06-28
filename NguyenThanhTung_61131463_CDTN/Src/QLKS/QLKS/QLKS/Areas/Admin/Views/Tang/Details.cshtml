@@ -1,0 +1,27 @@
+﻿@model QLKS.Models.tblTang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblTang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ten_tang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ten_tang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ma_tang }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

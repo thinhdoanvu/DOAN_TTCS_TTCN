@@ -1,0 +1,92 @@
+﻿@model QLKS.Models.tblDichVu
+
+@{
+    ViewBag.Title = "Sửa dịch vụ";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">@ViewBag.title</li>
+</ol>
+
+@using (Html.BeginForm("Edit", "DichVu", FormMethod.Post,
+                                        new { enctype = "multipart/form-data" }))
+{
+                @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ma_dv)
+
+    <div class="form-group">
+        @Html.Label("Tên dịch vụ", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ten_dv, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ten_dv, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Giá", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.gia, new { htmlAttributes = new { @class = "form-control", type = "number" } })
+            @Html.ValidationMessageFor(model => model.gia, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Đơn vị", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.don_vi, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.don_vi, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Tồn kho", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ton_kho, new { htmlAttributes = new { @class = "form-control", type = "number" } })
+            @Html.ValidationMessageFor(model => model.ton_kho, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Hình ảnh", htmlAttributes: new { @class = "control-label col-md-2" })
+
+        <div class="col-md-8">
+            <input type="file" name="file" id="file" class="form-control" style="width: 100%;" />
+        </div>
+        <div class="col-md-4">
+            <img src="@Model.anh" width="200px" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" onclick="return check()" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+<script>
+    function check() {
+        var ten = $('#ten_dv').val();
+        var gia = $('#gia').val();
+        var soluong = $('#ton_kho').val();
+        if (ten == '') {
+            alert('Tên dịch vụ không được để trống !');
+            return false;
+        }
+        if (gia == '') {
+            alert('Giá tiền không được để trống !');
+            return false;
+        }
+        if (soluong == '') {
+            alert('Số lượng không được để trống !');
+            return false;
+        }
+        return true;
+    }
+</script>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

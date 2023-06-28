@@ -1,0 +1,90 @@
+﻿@model IEnumerable<QLKS.Models.tblLoaiPhong>
+
+@{
+    ViewBag.Title = "List Rooms";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .thumb {
+        width: 100px;
+        height: 75px;
+        background-color: transparent;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+</style>
+<header id="gtco-header" class="gtco-cover gtco-cover-md g-header" role="banner" style="background-image: url(/Content/Home/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+</header>
+<br /><br /><br /><br />
+<div class="container">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Bảng giá phòng</h3>
+        </div>
+        <div class="panel-body">
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover" id="dataTable" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th width="100px"></th>
+                                    <th>
+                                        Loại phòng
+                                    </th>
+                                    <th>
+                                        Giá
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @{
+                                                String m = (item.anh);
+                                                try
+                                                {
+                                                    List<String> a = Newtonsoft.Json.JsonConvert.DeserializeObject<List<String>>(m);
+                                                    <div class="thumb" onclick="clickImg(@item.loai_phong)" style="background-image:url(@a[0]);" />
+                                                }
+                                                catch { }
+                                            }
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.mo_ta)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.gia)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="slider">
+
+</div>
+<script>
+    function clickImg(id) {
+        $.ajax({
+            url: "/Home/Slider/"+id,
+            type: "GET",
+            success: function (data) {
+                $("#slider").html(data);
+            }
+        });
+    }
+</script>

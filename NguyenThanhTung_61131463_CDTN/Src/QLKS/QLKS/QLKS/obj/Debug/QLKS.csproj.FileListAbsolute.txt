@@ -1,0 +1,232 @@
+I:\dotNet_Project\QLKS\QLKS\bin\ApplicationInsights.config
+I:\dotNet_Project\QLKS\QLKS\bin\QLKS.dll.config
+I:\dotNet_Project\QLKS\QLKS\bin\QLKS.dll
+I:\dotNet_Project\QLKS\QLKS\bin\QLKS.pdb
+I:\dotNet_Project\QLKS\QLKS\bin\Antlr3.Runtime.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.Agent.Intercept.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.DependencyCollector.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.PerfCounterCollector.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.Web.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.WindowsServer.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.ApplicationInsights.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.Web.Infrastructure.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Newtonsoft.Json.dll
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.Helpers.dll
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.Mvc.dll
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.Optimization.dll
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.Razor.dll
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.WebPages.Deployment.dll
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.WebPages.dll
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.WebPages.Razor.dll
+I:\dotNet_Project\QLKS\QLKS\bin\WebGrease.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.Helpers.xml
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.Mvc.xml
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.Optimization.xml
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.Razor.xml
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.WebPages.xml
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.WebPages.Deployment.xml
+I:\dotNet_Project\QLKS\QLKS\bin\System.Web.WebPages.Razor.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Antlr3.Runtime.pdb
+I:\dotNet_Project\QLKS\QLKS\bin\Newtonsoft.Json.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.ApplicationInsights.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.DependencyCollector.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.WindowsServer.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AI.Web.xml
+I:\dotNet_Project\QLKS\QLKS\obj\Debug\QLKS.csprojResolveAssemblyReference.cache
+I:\dotNet_Project\QLKS\QLKS\obj\Debug\QLKS.csproj.CoreCompileInputs.cache
+I:\dotNet_Project\QLKS\QLKS\obj\Debug\QLKS.dll
+I:\dotNet_Project\QLKS\QLKS\obj\Debug\QLKS.pdb
+I:\dotNet_Project\QLKS\QLKS\bin\EntityFramework.dll
+I:\dotNet_Project\QLKS\QLKS\bin\EntityFramework.SqlServer.dll
+I:\dotNet_Project\QLKS\QLKS\bin\EntityFramework.xml
+I:\dotNet_Project\QLKS\QLKS\bin\EntityFramework.SqlServer.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.Core.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.Owin.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.Owin.Host.SystemWeb.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.Owin.Security.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Owin.dll
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.Core.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.Owin.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.Owin.Host.SystemWeb.xml
+I:\dotNet_Project\QLKS\QLKS\bin\Microsoft.Owin.Security.xml
+I:\dotNet_Project\QLKS\QLKS\obj\Debug\QLKS.csproj.CopyComplete
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\ApplicationInsights.config
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\QLKS.dll.config
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\QLKS.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\QLKS.pdb
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Antlr3.Runtime.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\EntityFramework.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\EntityFramework.SqlServer.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.Web.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.Owin.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Security.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Newtonsoft.Json.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Owin.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.Helpers.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.Mvc.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.Optimization.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.Razor.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.WebPages.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\WebGrease.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\EntityFramework.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\EntityFramework.SqlServer.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.Owin.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Security.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.Helpers.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.Mvc.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.Optimization.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.Razor.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.WebPages.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Antlr3.Runtime.pdb
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Newtonsoft.Json.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\bin\Microsoft.AI.Web.xml
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.AssemblyReference.cache
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.CoreCompileInputs.cache
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.CopyComplete
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\obj\Debug\QLKS.dll
+C:\Users\Kit\Desktop\QLKS\QLKS\QLKS\obj\Debug\QLKS.pdb
+D:\DAKS\QLKS\QLKS\QLKS\bin\ApplicationInsights.config
+D:\DAKS\QLKS\QLKS\QLKS\bin\QLKS.dll.config
+D:\DAKS\QLKS\QLKS\QLKS\bin\QLKS.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\QLKS.pdb
+D:\DAKS\QLKS\QLKS\QLKS\bin\Antlr3.Runtime.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\EntityFramework.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\EntityFramework.SqlServer.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.Agent.Intercept.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.DependencyCollector.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.Web.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.WindowsServer.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.ApplicationInsights.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.Owin.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Security.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.Web.Infrastructure.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Newtonsoft.Json.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\Owin.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.Helpers.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.Mvc.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.Optimization.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.Razor.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Deployment.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.WebPages.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Razor.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\WebGrease.dll
+D:\DAKS\QLKS\QLKS\QLKS\bin\EntityFramework.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\EntityFramework.SqlServer.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.Owin.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Security.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.Helpers.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.Mvc.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.Optimization.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.Razor.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.WebPages.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Deployment.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Razor.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Antlr3.Runtime.pdb
+D:\DAKS\QLKS\QLKS\QLKS\bin\Newtonsoft.Json.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.ApplicationInsights.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.DependencyCollector.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.WindowsServer.xml
+D:\DAKS\QLKS\QLKS\QLKS\bin\Microsoft.AI.Web.xml
+D:\DAKS\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.CoreCompileInputs.cache
+D:\DAKS\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.CopyComplete
+D:\DAKS\QLKS\QLKS\QLKS\obj\Debug\QLKS.dll
+D:\DAKS\QLKS\QLKS\QLKS\obj\Debug\QLKS.pdb
+D:\DAKS\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.AssemblyReference.cache
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\ApplicationInsights.config
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\QLKS.dll.config
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\QLKS.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\QLKS.pdb
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Antlr3.Runtime.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\EntityFramework.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\EntityFramework.SqlServer.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.Agent.Intercept.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.DependencyCollector.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.Web.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.WindowsServer.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.ApplicationInsights.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.Owin.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Security.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.Web.Infrastructure.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Newtonsoft.Json.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Owin.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.Helpers.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.Mvc.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.Optimization.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.Razor.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Deployment.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.WebPages.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Razor.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\WebGrease.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\EntityFramework.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\EntityFramework.SqlServer.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.Owin.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.Owin.Security.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.Helpers.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.Mvc.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.Optimization.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.Razor.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.WebPages.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Deployment.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\System.Web.WebPages.Razor.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Antlr3.Runtime.pdb
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Newtonsoft.Json.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.ApplicationInsights.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.DependencyCollector.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.WindowsServer.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\bin\Microsoft.AI.Web.xml
+D:\A - Chuyen de\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.AssemblyReference.cache
+D:\A - Chuyen de\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.CoreCompileInputs.cache
+D:\A - Chuyen de\QLKS\QLKS\QLKS\obj\Debug\QLKS.csproj.CopyComplete
+D:\A - Chuyen de\QLKS\QLKS\QLKS\obj\Debug\QLKS.dll
+D:\A - Chuyen de\QLKS\QLKS\QLKS\obj\Debug\QLKS.pdb

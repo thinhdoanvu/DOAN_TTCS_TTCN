@@ -1,0 +1,72 @@
+﻿@model IEnumerable<QLKS.Models.tblDichVu>
+
+@{
+    ViewBag.Title = "Danh sách dịch vụ";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="@Url.Action("Index","Index")">Admin</a>
+    </li>
+    <li class="breadcrumb-item active">Danh sách dịch vụ</li>
+</ol>
+<p>
+    @Html.ActionLink("Thêm dịch vụ", "Create")
+</p>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Danh sách dịch vụ
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover" id="dataTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            Tên dịch vụ
+                        </th>
+                        <th>
+                            Giá
+                        </th>
+                        <th>
+                            Tồn kho
+                        </th>
+                        <th>
+                            Đơn vị
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            <img src="@Html.DisplayFor(modelItem => item.anh)" width="60px" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ten_dv)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.gia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ton_kho)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.don_vi)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ma_dv }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ma_dv })
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at @DateTime.Now</div>
+</div>

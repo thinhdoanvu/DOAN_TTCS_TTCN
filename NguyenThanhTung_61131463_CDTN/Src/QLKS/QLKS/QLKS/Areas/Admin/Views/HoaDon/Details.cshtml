@@ -1,0 +1,83 @@
+﻿@model QLKS.Models.tblHoaDon
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblHoaDon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ngay_tra_phong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngay_tra_phong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tien_phong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tien_phong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tien_dich_vu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tien_dich_vu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phu_thu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phu_thu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tong_tien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tong_tien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblNhanVien.ho_ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblNhanVien.ho_ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPhieuDatPhong.ma_kh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPhieuDatPhong.ma_kh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblTinhTrangHoaDon.mo_ta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblTinhTrangHoaDon.mo_ta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ma_hd }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

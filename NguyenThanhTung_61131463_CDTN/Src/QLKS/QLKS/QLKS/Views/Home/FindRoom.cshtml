@@ -1,0 +1,202 @@
+﻿@model IEnumerable<QLKS.Models.tblPhong>
+
+@{
+    ViewBag.Title = "Tìm phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .thumb {
+        width: 100px;
+        height: 75px;
+        background-color: #3e3e3e;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    } 
+</style>
+<header id="gtco-header" class="gtco-cover gtco-cover-md g-header" role="banner" style="background-image: url(/Content/Home/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+</header>
+<div class="container">
+    <br /><br /><br /><br />
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tìm phòng</h3>
+        </div>
+        <div class="panel-body">
+
+
+            @using (Html.BeginForm("FindRoom", "Home"))
+    {
+        @*<div class="row form-group">
+        <div class="col-md-12">
+            <label for="activities">Type Room</label>
+            <select name="#" id="activities" class="form-control">
+                <option value="">All</option>
+                <option value="">Phòng đơn</option>
+                <option value="">Phòng đôi</option>
+                <option value="">Phòng VIP</option>
+            </select>
+        </div>
+    </div>*@
+        <div class="row">
+            <div class="col-md-3">
+                <label for="date_start">Start Date</label>
+                @Html.TextBox("datestart", null, new { @class = "form-control" })
+            </div>
+            <div class="col-md-3">
+                <label for="date_end">End Date</label>
+                @Html.TextBox("dateend", null, new { @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                <label for="date_end" style="visibility:hidden">End Date</label>
+                <input type="submit" onclick="return checkday()" class="btn btn-primary btn-block" value="Tìm phòng">
+            </div>
+            <div class="col-md-4">
+                <label for="date_end" style="visibility:hidden">OK</label>
+                @*<input type="submit" onclick="return checkday()" class="btn btn-primary btn-block" value="Tìm phòng">*@
+                <a href="@Url.Action("BookRoom","Home")" onclick="return checkChonPhong()" class="btn btn-primary btn-block">Hoàn Tất</a>
+            </div>
+        </div>
+}
+            <br />
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered text-center align-middle">
+                    <tr>
+                        <th width="100px"></th>
+                        <th>
+                            Số phòng
+                        </th>
+                        <th>
+                            Mô tả
+                        </th>
+                        <th>
+                            Tầng
+                        </th>
+                        <th>
+                            Giá
+                        </th>
+                        <th width="100px"></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @{
+                    String m = (item.tblLoaiPhong.anh);
+                    try
+                    {
+                        List<String> a = Newtonsoft.Json.JsonConvert.DeserializeObject<List<String>>(m);
+                        <div class="thumb" onclick="clickImg(@item.tblLoaiPhong.loai_phong)" style="background-image:url(@a[0]);" />
+                //<img src="@a[0]" onclick="clickImg(@item.ma_phong)" style="width:auto; height:50px;" />
+            }
+            catch { }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.so_phong)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tblLoaiPhong.mo_ta)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tblTang.ten_tang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tblLoaiPhong.gia)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Đặt phòng", "ChonPhong", new { id = @item.ma_phong })*@
+                        <button id="btn_@item.ma_phong" class="btn btn-success" onclick="btnClick(@item.ma_phong)">Chọn phòng</button>
+                        @*<a href="@Url.Action("ChonPhong","Home", new { id = @item.ma_phong })"><div class="btn btn-success btn-xs" style="padding: 1px 5px;">Đặt phòng</div></a>*@
+                    </td>
+                </tr>
+    }
+
+                </table>
+                </div>
+            </div>
+        </div>
+</div>
+<div id="slider">
+    
+</div>
+<script>
+    function clickImg(id) {
+        $.ajax({
+            url: "/Home/Slider/"+id,
+            type: "GET",
+            success: function (data) {
+                $("#slider").html(data);
+            }
+        });
+    }
+</script>
+<script>
+    function btnClick(id) {
+        var btn = $('#btn_' + id);
+        if (btn.html() == "Chọn phòng") {
+            $.ajax({
+                url: '/Home/ChonPhong/' + id,
+                type: 'GET',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                success: function (data) {
+                    if (data.trim() == 'success') {
+                    btn.removeClass('btn-success').addClass('btn-default');
+                        $('#btn_' + id).html('Huỷ chọn');
+                    }
+                }
+            });
+        } else {
+            $.ajax({
+                url: '/Home/HuyChon/' + id,
+                type: 'GET',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                success: function (data) {
+                    if (data.trim() == 'success') {
+                    btn.removeClass('btn-default').addClass('btn-success');
+                        $('#btn_' + id).html('Chọn phòng');
+                    }
+                }
+            });
+        }
+    }
+    function checkChonPhong() {
+        var li = document.getElementsByClassName('btn-default');
+        if (li.length == 0) {
+            alert('Bạn chưa chọn phòng');
+            return false;
+        }
+        return true;
+    }
+</script>
+<script>
+    function checkday() {
+        var from1 = $("#datestart").val().split("/");
+        var dateS = new Date(from1[2], from1[1] - 1, from1[0]);
+        var from2 = $("#dateend").val().split("/");
+        var dateE = new Date(from2[2], from2[1] - 1, from2[0]);
+
+        var now = new Date();
+        now.setHours(0);
+        now.setSeconds(0);
+        now.setMinutes(0);
+        now.setMilliseconds(0);
+
+        if (dateS < now) {
+            alert("Ngày vào lớn hơn hoặc bằng ngày hiện tại !");
+            return false;
+        }
+        if (dateE <= dateS) {
+            alert("Ngày ra phải lớn hơn ngày vào ít nhất 1 ngày !");
+            return false;
+        }
+        if (from1 == "" || from2 == "") {
+            alert("Ngày tháng không được để trống !");
+            return false;
+        }
+        return true;
+    }
+</script>
