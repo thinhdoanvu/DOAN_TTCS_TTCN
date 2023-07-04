@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://object/answer/answer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://object/answers/answers.gd" type="Script" id=3]
+
+[node name="Answers" type="VBoxContainer"]
+margin_top = 101.0
+margin_right = 484.0
+margin_bottom = 254.0
+custom_constants/separation = 15
+script = ExtResource( 3 )
+
+[node name="A" parent="." instance=ExtResource( 2 )]
+
+[node name="B" parent="." instance=ExtResource( 2 )]
+margin_top = 42.0
+margin_bottom = 69.0
+
+[node name="C" parent="." instance=ExtResource( 2 )]
+margin_top = 84.0
+margin_bottom = 111.0
+
+[node name="D" parent="." instance=ExtResource( 2 )]
+margin_top = 126.0
+margin_bottom = 153.0

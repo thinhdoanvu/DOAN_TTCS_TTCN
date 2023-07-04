@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://asset/sprite2D/UI/certificate.jpg" type="Texture" id=1]
+[ext_resource path="res://asset/font/SVN-Aaron Script.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://object/certificate/certificate_object.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Certificate" type="Node"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_vertical_guides_": [ 600.0 ]
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1650.0
+margin_bottom = 1275.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Name" type="Label" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -853.0
+margin_top = 36.5
+margin_right = 854.0
+margin_bottom = 299.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Phạm Ngọc Ẩn"
+align = 1
+valign = 1
+
+[node name="Date" type="Label" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -165.0
+margin_top = 554.5
+margin_right = 172.0
+margin_bottom = 647.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "16/03/2001"
+align = 1
+
+[node name="MSSV" type="Label" parent="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 475.0
+margin_top = 304.5
+margin_right = 740.0
+margin_bottom = 344.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "61130013"
+align = 1

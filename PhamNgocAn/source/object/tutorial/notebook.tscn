@@ -1,0 +1,228 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://asset/sprite2D/UI/book_open.png" type="Texture" id=1]
+[ext_resource path="res://asset/font/arial.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://object/tutorial/notebook.gd" type="Script" id=3]
+[ext_resource path="res://asset/sprite2D/UI/btn_next_notebook.png" type="Texture" id=6]
+[ext_resource path="res://asset/sprite2D/UI/close_button.png" type="Texture" id=8]
+[ext_resource path="res://asset/sprite2D/UI/bg_main.png" type="Texture" id=9]
+[ext_resource path="res://asset/font/Roboto-Italic.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://asset/font/Roboto-Black.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://object/button/button_v2.tscn" type="PackedScene" id=12]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float alpha: hint_range(0,1,0.1);
+
+void fragment(){
+	COLOR = vec4(0,0,0,alpha);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/alpha = 0.6
+
+[sub_resource type="DynamicFont" id=5]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 18
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 18
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 2 )
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="BackgroundBlack" type="TextureRect" parent="."]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Notebook" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="Notebook"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 66.0
+margin_top = 66.0
+margin_right = -61.0
+margin_bottom = -34.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="LabelPageLeft" type="Label" parent="Notebook"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 372.0
+margin_top = -79.0
+margin_right = 412.0
+margin_bottom = -60.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "1"
+align = 1
+
+[node name="LabelPageRight" type="Label" parent="Notebook"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -414.0
+margin_top = -77.0
+margin_right = -374.0
+margin_bottom = -58.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "2"
+align = 1
+
+[node name="BtnPrev" parent="Notebook" instance=ExtResource( 12 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 82.0
+margin_top = -41.0
+margin_right = 210.0
+margin_bottom = 87.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+flip_h = true
+
+[node name="BtnNext" parent="Notebook" instance=ExtResource( 12 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -142.0
+margin_top = -39.0
+margin_right = -14.0
+margin_bottom = 89.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+
+[node name="BtnClose" parent="Notebook" instance=ExtResource( 12 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -233.0
+margin_top = 79.0
+margin_right = -185.0
+margin_bottom = 127.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 8 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Notebook"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -370.0
+margin_top = -250.0
+margin_right = 370.0
+margin_bottom = 250.0
+custom_constants/separation = 70
+
+[node name="LeftPaper" type="VBoxContainer" parent="Notebook/HBoxContainer"]
+margin_right = 330.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 330, 500 )
+
+[node name="LeftTexture" type="TextureRect" parent="Notebook/HBoxContainer/LeftPaper"]
+margin_right = 330.0
+margin_bottom = 223.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+stretch_mode = 6
+
+[node name="LeftTitle" type="Label" parent="Notebook/HBoxContainer/LeftPaper"]
+margin_top = 227.0
+margin_right = 330.0
+margin_bottom = 249.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+autowrap = true
+
+[node name="LeftSub" type="Label" parent="Notebook/HBoxContainer/LeftPaper"]
+margin_top = 253.0
+margin_right = 330.0
+margin_bottom = 272.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+autowrap = true
+
+[node name="LeftContent" type="Label" parent="Notebook/HBoxContainer/LeftPaper"]
+margin_top = 276.0
+margin_right = 330.0
+margin_bottom = 500.0
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+autowrap = true
+clip_text = true
+
+[node name="RightPaper" type="VBoxContainer" parent="Notebook/HBoxContainer"]
+margin_left = 400.0
+margin_right = 730.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 330, 500 )
+
+[node name="RightTexture" type="TextureRect" parent="Notebook/HBoxContainer/RightPaper"]
+margin_right = 330.0
+margin_bottom = 223.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+stretch_mode = 6
+
+[node name="RightTitle" type="Label" parent="Notebook/HBoxContainer/RightPaper"]
+margin_top = 227.0
+margin_right = 330.0
+margin_bottom = 249.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+autowrap = true
+
+[node name="RightSub" type="Label" parent="Notebook/HBoxContainer/RightPaper"]
+margin_top = 253.0
+margin_right = 330.0
+margin_bottom = 272.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+autowrap = true
+
+[node name="RightContent" type="Label" parent="Notebook/HBoxContainer/RightPaper"]
+margin_top = 276.0
+margin_right = 330.0
+margin_bottom = 500.0
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+autowrap = true
+clip_text = true
+
+[connection signal="button_down" from="Notebook/BtnPrev" to="." method="_on_BtnPrev_button_down"]
+[connection signal="button_down" from="Notebook/BtnNext" to="." method="_on_BtnNext_button_down"]
+[connection signal="button_down" from="Notebook/BtnClose" to="." method="_on_BtnClose_button_down"]

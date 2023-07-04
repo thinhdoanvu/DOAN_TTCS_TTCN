@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_ThanKinh_frame4.mp3-9b41e14e100232a853a12eecb88b2e41.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame4/voice_ThanKinh_frame4.mp3"
+dest_files=[ "res://.import/voice_ThanKinh_frame4.mp3-9b41e14e100232a853a12eecb88b2e41.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

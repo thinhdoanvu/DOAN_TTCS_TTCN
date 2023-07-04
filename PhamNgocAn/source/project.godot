@@ -1,0 +1,55 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Biology Lab Demo"
+run/main_scene="res://scene/frame1/frame1_login.tscn"
+config/icon="res://icon.png"
+
+[audio]
+
+default_bus_layout=""
+
+[autoload]
+
+Global="*res://autoload/global.gd"
+Load="*res://autoload/load.gd"
+Tutorial="*res://autoload/tutorial.gd"
+Untils="*res://autoload/untils.gd"
+
+[display]
+
+window/size/width=1200
+window/size/height=700
+window/dpi/allow_hidpi=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[gdnative]
+
+singletons=[  ]
+
+[importer_defaults]
+
+mp3={
+"loop": false,
+"loop_offset": 0
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+2d/snapping/use_gpu_pixel_snap=true
+quality/filters/use_fxaa=true
+environment/default_environment="res://default_env.tres"

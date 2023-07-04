@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_LuyenTapLayNetHienVi3_frame5.mp3-47f4a1635c613b9dd30402510fb50039.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame5/voice_LuyenTapLayNetHienVi3_frame5.mp3"
+dest_files=[ "res://.import/voice_LuyenTapLayNetHienVi3_frame5.mp3-47f4a1635c613b9dd30402510fb50039.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

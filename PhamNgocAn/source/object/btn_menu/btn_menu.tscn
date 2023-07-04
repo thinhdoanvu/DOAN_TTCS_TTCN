@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://object/btn_menu/btn_menu.gd" type="Script" id=1]
+[ext_resource path="res://asset/sprite2D/UI/dialogbox_menu.png" type="Texture" id=2]
+[ext_resource path="res://asset/sprite2D/UI/d1.png" type="Texture" id=3]
+[ext_resource path="res://asset/sounds/effect/hover_btn.mp3" type="AudioStream" id=4]
+[ext_resource path="res://asset/sprite2D/UI/p1.png" type="Texture" id=5]
+[ext_resource path="res://asset/sprite2D/UI/tickfinal.png" type="Texture" id=6]
+[ext_resource path="res://asset/font/Roboto-Black.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 7 )
+
+[node name="BtnMenu" type="TextureButton"]
+margin_right = 85.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 85, 100 )
+rect_pivot_offset = Vector2( 42, 42 )
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 5 )
+texture_disabled = ExtResource( 3 )
+script = ExtResource( 1 )
+hover_sound = ExtResource( 4 )
+
+[node name="SpriteDialogBox" type="Sprite" parent="."]
+position = Vector2( -16, 40 )
+texture = ExtResource( 2 )
+offset = Vector2( -133, 0 )
+
+[node name="LabelDialogBox" type="Label" parent="SpriteDialogBox"]
+margin_left = -254.0
+margin_top = -34.0
+margin_right = -32.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 222, 34 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Nội dung"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="SpriteTickFinal" type="Sprite" parent="."]
+position = Vector2( 74, 11 )
+texture = ExtResource( 6 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_TextureButton_mouse_exited"]

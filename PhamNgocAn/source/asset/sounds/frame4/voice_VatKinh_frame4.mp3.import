@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_VatKinh_frame4.mp3-448f735772d1b1390ca63e1794899dc5.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame4/voice_VatKinh_frame4.mp3"
+dest_files=[ "res://.import/voice_VatKinh_frame4.mp3-448f735772d1b1390ca63e1794899dc5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

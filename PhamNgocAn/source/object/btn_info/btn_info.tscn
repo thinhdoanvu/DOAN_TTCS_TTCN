@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://object/btn_info/btn_info.gd" type="Script" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/question.png-bc037a47d85c6cf5cbd5e453386a2f4c.stex"
+
+[node name="Tick" type="TextureButton"]
+margin_right = 47.0
+margin_bottom = 47.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = SubResource( 1 )
+script = ExtResource( 1 )
+
+[connection signal="button_down" from="." to="." method="_on_Tick_button_down"]
+[connection signal="button_up" from="." to="." method="_on_Tick_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_Tick_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Tick_mouse_exited"]

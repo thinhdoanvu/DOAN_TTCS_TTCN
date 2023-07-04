@@ -1,0 +1,115 @@
+[gd_resource type="Theme" load_steps=14 format=2]
+
+[ext_resource path="res://asset/font/Roboto-Black.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://asset/sprite2D/UI/h_slider.png" type="Texture" id=2]
+[ext_resource path="res://asset/sprite2D/UI/tick_splider.png" type="Texture" id=3]
+[ext_resource path="res://asset/sprite2D/UI/v_slider.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0509804, 0.4, 0.815686, 1 )
+border_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+shadow_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0784314, 0.45098, 0.901961, 1 )
+border_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+shadow_color = Color( 0, 0, 0, 0 )
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.294118, 0.709804, 0.882353, 1 )
+corner_radius_top_left = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 238, 12 )
+margin_left = 7.68197
+margin_right = 7.88958
+margin_top = 6.57048
+margin_bottom = 5.58802
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.854902, 0.854902, 0.854902, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0784314, 0.45098, 0.901961, 1 )
+corner_radius_top_left = 17
+corner_radius_top_right = 17
+corner_radius_bottom_right = 17
+corner_radius_bottom_left = 17
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0784314, 0.45098, 0.901961, 1 )
+corner_radius_top_left = 17
+corner_radius_top_right = 17
+corner_radius_bottom_right = 17
+corner_radius_bottom_left = 17
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.294118, 0.709804, 0.882353, 1 )
+corner_radius_top_left = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 12, 238 )
+margin_left = 5.87432
+margin_right = 6.3262
+margin_top = 9.2013
+margin_bottom = 7.004
+
+[sub_resource type="DynamicFont" id=2]
+size = 19
+font_data = ExtResource( 1 )
+
+[resource]
+default_font = SubResource( 2 )
+Button/styles/disabled = SubResource( 3 )
+Button/styles/focus = SubResource( 1 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 1 )
+HSlider/icons/grabber = ExtResource( 3 )
+HSlider/icons/grabber_disabled = ExtResource( 3 )
+HSlider/icons/grabber_highlight = ExtResource( 3 )
+HSlider/styles/grabber_area = SubResource( 5 )
+HSlider/styles/grabber_area_highlight = SubResource( 5 )
+HSlider/styles/slider = SubResource( 7 )
+LineEdit/colors/font_color = Color( 0.321569, 0.321569, 0.321569, 1 )
+LineEdit/styles/focus = SubResource( 11 )
+LineEdit/styles/normal = SubResource( 10 )
+VSlider/icons/grabber = ExtResource( 3 )
+VSlider/icons/grabber_highlight = ExtResource( 3 )
+VSlider/styles/grabber_area = SubResource( 8 )
+VSlider/styles/grabber_area_highlight = SubResource( 8 )
+VSlider/styles/slider = SubResource( 9 )

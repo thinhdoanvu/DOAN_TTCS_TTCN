@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chat_AnhSangDiQuaKhongDu_frame5.mp3-0d461a30b1e1e114191f613dad8a1fae.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame5/chat/chat_AnhSangDiQuaKhongDu_frame5.mp3"
+dest_files=[ "res://.import/chat_AnhSangDiQuaKhongDu_frame5.mp3-0d461a30b1e1e114191f613dad8a1fae.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

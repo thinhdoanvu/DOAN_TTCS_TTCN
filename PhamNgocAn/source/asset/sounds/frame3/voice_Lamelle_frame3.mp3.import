@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_Lamelle_frame3.mp3-bce874b68c243c6ae5c1ebe37bf3df33.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame3/voice_Lamelle_frame3.mp3"
+dest_files=[ "res://.import/voice_Lamelle_frame3.mp3-bce874b68c243c6ae5c1ebe37bf3df33.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

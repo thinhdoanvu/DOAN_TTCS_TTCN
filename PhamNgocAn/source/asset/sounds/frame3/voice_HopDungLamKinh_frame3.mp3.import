@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_HopDungLamKinh_frame3.mp3-791d05e9f73ca4d7d8ade8bc5b872348.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame3/voice_HopDungLamKinh_frame3.mp3"
+dest_files=[ "res://.import/voice_HopDungLamKinh_frame3.mp3-791d05e9f73ca4d7d8ade8bc5b872348.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

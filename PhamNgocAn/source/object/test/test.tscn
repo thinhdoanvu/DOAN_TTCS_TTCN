@@ -1,0 +1,138 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://object/test/test.gd" type="Script" id=1]
+[ext_resource path="res://asset/sprite2D/UI/paper_test.png" type="Texture" id=2]
+[ext_resource path="res://asset/font/arial.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://object/answers/answers.tscn" type="PackedScene" id=5]
+[ext_resource path="res://object/test/button_question_index.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+outline_color = Color( 1, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 2
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+font_data = ExtResource( 3 )
+
+[node name="Test" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Paper" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -289.5
+margin_top = -387.0
+margin_right = 289.5
+margin_bottom = 387.0
+texture = ExtResource( 2 )
+patch_margin_left = 22
+patch_margin_top = 26
+patch_margin_right = 19
+patch_margin_bottom = 20
+
+[node name="Title" type="Label" parent="Paper"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -177.5
+margin_top = 98.0
+margin_right = 177.5
+margin_bottom = 137.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "KIỂM TRA KIẾN THỨC"
+
+[node name="Content" type="VBoxContainer" parent="Paper"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -241.5
+margin_top = 188.0
+margin_right = 242.5
+margin_bottom = 720.0
+custom_constants/separation = 20
+
+[node name="Question" type="Label" parent="Paper/Content"]
+margin_right = 484.0
+margin_bottom = 81.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Câu hỏi: ?????????????????????????????????? ?? ?? ??? ?????"
+autowrap = true
+
+[node name="Answers" parent="Paper/Content" instance=ExtResource( 5 )]
+
+[node name="BtnQuestions" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -600.0
+margin_top = -700.0
+margin_right = 600.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BtnQuestions"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -154.0
+margin_top = -71.0
+margin_right = 154.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="BtnQuestions/VBoxContainer"]
+margin_right = 308.0
+margin_bottom = 36.0
+custom_constants/separation = 20
+
+[node name="Button6" parent="BtnQuestions/VBoxContainer/HBoxContainer2" instance=ExtResource( 10 )]
+text = "<"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BtnQuestions/VBoxContainer/HBoxContainer2"]
+margin_left = 56.0
+margin_right = 252.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 0, 36 )
+alignment = 1
+
+[node name="Button" parent="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer" instance=ExtResource( 10 )]
+
+[node name="Button2" parent="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer" instance=ExtResource( 10 )]
+margin_left = 40.0
+margin_right = 76.0
+text = "2"
+
+[node name="Button3" parent="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer" instance=ExtResource( 10 )]
+margin_left = 80.0
+margin_right = 116.0
+text = "3"
+
+[node name="Button4" parent="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer" instance=ExtResource( 10 )]
+margin_left = 120.0
+margin_right = 156.0
+text = "4"
+
+[node name="Button5" parent="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer" instance=ExtResource( 10 )]
+margin_left = 160.0
+margin_right = 196.0
+text = "5"
+
+[node name="Button7" parent="BtnQuestions/VBoxContainer/HBoxContainer2" instance=ExtResource( 10 )]
+margin_left = 272.0
+margin_right = 308.0
+text = ">"
+
+[connection signal="button_down" from="BtnQuestions/VBoxContainer/HBoxContainer2/Button6" to="." method="_on_Button6_button_down"]
+[connection signal="button_down" from="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer/Button" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer/Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer/Button3" to="." method="_on_Button3_button_down"]
+[connection signal="button_down" from="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer/Button4" to="." method="_on_Button4_button_down"]
+[connection signal="button_down" from="BtnQuestions/VBoxContainer/HBoxContainer2/HBoxContainer/Button5" to="." method="_on_Button5_button_down"]
+[connection signal="button_down" from="BtnQuestions/VBoxContainer/HBoxContainer2/Button7" to="." method="_on_Button7_button_down"]

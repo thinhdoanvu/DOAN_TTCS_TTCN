@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_DauSoiKinh_frame3.mp3-8133ad254efb4d8b441c2b6e771db818.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame3/voice_DauSoiKinh_frame3.mp3"
+dest_files=[ "res://.import/voice_DauSoiKinh_frame3.mp3-8133ad254efb4d8b441c2b6e771db818.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_GioiThieuThucHanhVoiVatKinh100X_3_frame5.mp3-b3e4820fde85307ccb4e2539f050136e.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame5/voice_GioiThieuThucHanhVoiVatKinh100X_3_frame5.mp3"
+dest_files=[ "res://.import/voice_GioiThieuThucHanhVoiVatKinh100X_3_frame5.mp3-b3e4820fde85307ccb4e2539f050136e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

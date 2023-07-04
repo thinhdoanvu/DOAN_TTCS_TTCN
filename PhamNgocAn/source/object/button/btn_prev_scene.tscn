@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://asset/font/arial.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://asset/sprite2D/UI/change_scene_btn.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends \"res://object/button/button_v2.gd\"
+
+func _ready():
+	pass
+"
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="BtnPrevScene" type="TextureButton"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -80.0
+margin_right = 85.0
+margin_bottom = -16.0
+texture_normal = ExtResource( 2 )
+flip_h = true
+script = SubResource( 2 )
+
+[node name="LabelName" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 12.0
+margin_top = -12.0
+margin_right = 312.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 1 )
+text = "Prev"
+clip_text = true
+uppercase = true
+
+[connection signal="mouse_entered" from="." to="." method="_on_BtnPrevScene_mouse_entered"]

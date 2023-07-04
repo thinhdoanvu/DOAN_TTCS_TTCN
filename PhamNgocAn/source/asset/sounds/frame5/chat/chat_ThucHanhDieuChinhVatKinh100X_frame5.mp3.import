@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chat_ThucHanhDieuChinhVatKinh100X_frame5.mp3-c9755e7e4a8f3ed735902cab6a04a07b.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame5/chat/chat_ThucHanhDieuChinhVatKinh100X_frame5.mp3"
+dest_files=[ "res://.import/chat_ThucHanhDieuChinhVatKinh100X_frame5.mp3-c9755e7e4a8f3ed735902cab6a04a07b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
