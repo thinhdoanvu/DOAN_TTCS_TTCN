@@ -1,0 +1,150 @@
+@charset "utf-8";
+body{
+  background-color: var(--dark);
+}
+.alert-wrapper{
+  width: 100vw;
+  top: 20px;
+  display: block;
+  position: fixed;
+  z-index: 2;
+}
+.container {
+  background-color: white;
+  flex: 1;
+  height: 80vh;
+  margin: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 2rem 4rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 5rem;
+  font-family: sBold, sans-serif;
+  font-weight: bold;
+  line-height: 10rem;
+  padding-bottom: 20px;
+}
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+}
+label {
+  color: #666;
+  font-size: 1.5rem;
+  background-color: white;
+  left: 10px;
+  position: absolute;
+  padding: 0 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+input:focus{
+    border: 2px solid var(--accent);
+}
+
+.input-wrapper:focus-within .add-admin-label{
+    color:var(--accent);
+}
+.input-wrapper:focus-within input{
+    color:var(--accent);
+}
+/* Change placeholder textcolor */
+::placeholder{
+    color: #808080;
+}
+
+
+
+#admin-name {
+  font-size: 3rem;
+  background-color: var(--sub);
+  color: white;
+  border-radius: 5px;
+  padding: 0 1.5rem;
+  letter-spacing: 2px;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  flex-wrap: nowrap;
+  padding: 10px 0 20px 0    ;
+}
+
+button {
+  padding: .8rem 2rem;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: var(--sub);
+}
+.error {
+  background-color: #e91e4a;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.success {
+  background-color: #0eb438;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 45%;
+  }
+  .container {
+    margin: 10vh;
+    height: 80vh;
+  }
+  .title {
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .button {
+    flex-direction: column;
+    background-color: red;
+  }
+ 
+}

@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+/* BREADCRUMB */
+.breadcrumb{
+	width: 95vw;
+	height: 2vh;
+	margin-top: 10vh;
+	position: relative;
+}
+.breadcrumb-text{
+	position: absolute;
+	left: 0;
+	width: fit-content;
+	color: var(--light);
+	font-size: 1rem;
+	text-align: left;
+	background-color: var(--dark);
+	padding: 5px 10px;
+	letter-spacing: .03rem;
+
+	font-family: 'sRegular', Verdana, sans-serif;
+}
+.breadcrumb-text span{
+	color: white;
+	font-family: 'sRegular', Verdana, sans-serif;
+}
+
+/* CATEGORY CONTENT */
+.category{
+	width: 95vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.category-title{
+	color: var(--light);
+	font-size: 2.5rem;
+	font-family: 'sSemibold', Verdana, sans-serif;
+	width: fit-content;
+	text-align: center;
+	position: relative;
+	
+	padding-top: 80px;
+	padding-bottom: 30px;
+}
+.category-title::after{
+	content:"";
+	width: 50%;
+	height: 2px;
+	background-color: var(--accent);
+	position: absolute;
+	left: 0;
+	bottom: 2.5vh;
+}
+
+.category-row{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-bottom: 5vh;
+}
+
+.category-item{
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 19%;
+	flex: 1;
+	min-width: 300px;
+	max-width: 600px;
+	height: 60vh;
+	min-height: 300px;
+	background-color: var(--bg1);
+	border-radius: 5px;
+	/* margin: 0.5%; */
+	padding: 5px;
+	transition: .35s ease;
+	border: solid 1px var(--bg2);
+
+	position: relative;
+}
+
+.category-item:hover{
+	background-color: var(--dark);
+	border: solid 1px var(--accent);
+	flex: 1.2;
+}
+/* .category-item:hover>.item-title{
+	color: var(--bg1);
+} */
+
+.thumb{
+	width: 100%;
+	height: 75%;
+	/* background-color: var(--bg2); */
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;	
+	border: solid 1px white;
+}
+
+.item-title{
+	width: 95%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	bottom: 3%;
+	color: white;
+	font-size: 1.5rem;
+	font-family: 'sSemibold', Verdana, sans-serif;
+	letter-spacing: .8px;
+	
+	display: flex;
+	justify-content: center;
+}
+
+
+/* PRODUCT DETAIL POPUP */
+
+.popup-container{
+	z-index: 10;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 85vw;
+	height: 95vh;
+	background-color: transparent;
+	/* background-color: rgba(0,0,0,0.65); */
+
+	/* display: flex; */
+	display: none;
+	justify-content: center;
+	align-items: center;
+
+	flex-direction: column;
+	padding-top: 3vh;
+	/* border: solid 10px red; */
+}
+.dismiss{
+	width: 100%;
+	height: 35px;
+	margin-top: 20px;
+
+	background-image: url("../img/close.svg");
+	background-size: contain;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	transition: 0.35s ease;
+	/* background-color: transparent; */
+}
+.dismiss:hover{
+	background-image: url("../img/closehover.svg");
+	/* box-shadow: 0 0 20px white; */
+}
+.popup{
+	width: 100%;
+	height: 100%;
+	background-color: var(--bg1);
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 20px 0;
+}
+.popup-thumbnail{
+	flex: 1;
+	height: 100%;
+	width: 10%;
+	min-height: 200px;
+	min-width: 350px;
+	background-color: var(--bg2);
+	border-radius: 5px;
+	margin: 0 20px;
+	overflow: hidden;
+}
+.productimgwrapper{
+	width: 100%;
+	height: 100%;
+	border: solid 1px white;
+	transition: 0.35s ease;
+	/* transform: translateY(-100%); */
+}
+.productimg{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.productimg img{
+	width: 100%;
+	height: 100%;
+}
+.translateY100{ transform: translateY(-100%)}
+.translateY200{ transform: translateY(-200%)}
+.translateY300{ transform: translateY(-300%)}
+.translateY400{ transform: translateY(-400%)}
+.popup-content{
+	flex: 1;
+	width: 70%;
+	min-width: 350px;
+	margin: 0 20px;
+}
+.product-title{
+	color: white;
+	font-size: 3rem;
+	font-family: 'sBold';
+}
+.product-description{
+	margin-top: 1rem;
+	color: var(--light);
+	line-height: 3rem;
+	font-size: 1.5rem;
+
+	position: relative;
+}
+.product-description span{
+	position: absolute;
+	left: 8rem;
+}
+
+.popup-bg{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.65);
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}

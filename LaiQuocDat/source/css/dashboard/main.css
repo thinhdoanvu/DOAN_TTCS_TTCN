@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+:root {
+  --bg: #eee;
+  --accent: #2f87ce;
+  --sub: #f36e21;
+  --dark: #999;
+  
+}
+
+* {
+  padding: 0;
+  margin: 0 auto;
+  font-family: sRegular, Verdana, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+@font-face {
+	font-family: "sRegular";
+	src: url("../../font/NotoSansDisplay-Regular.woff");
+}
+@font-face {
+	font-family: "sItalic";
+	src: url("../../font/NotoSansDisplay-Italic.woff");
+}
+@font-face {
+	font-family: "sLight";
+	src: url("../../font/NotoSansDisplay-Light.woff");
+}
+@font-face {
+	font-family: "sSemibold";
+	src: url("../../font/NotoSansDisplay-SemiBold.woff");
+}
+@font-face {
+	font-family: "sBold";
+	src: url("../../font/NotoSansDisplay-Bold.woff");
+}
+@font-face {
+	font-family: "sBlack";
+	src: url("../../font/NotoSansDisplay-Black.woff");
+}

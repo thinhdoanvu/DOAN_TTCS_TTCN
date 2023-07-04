@@ -1,0 +1,9 @@
+@charset "utf-8";
+#note{
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+}
+.subcategory {
+  margin: 2rem;
+}

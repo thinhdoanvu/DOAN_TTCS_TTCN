@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.webgl{
+	width: 800px;
+	height: 600px;
+	position: fixed;
+	z-index: 10;
+	border: solid 1px red;
+	background-color: red;
+}

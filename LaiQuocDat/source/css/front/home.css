@@ -1,0 +1,497 @@
+@charset "utf-8";
+
+/* HERO CONTENT */
+.hero{
+	width: 100%;
+	height: 100vh;
+	min-height: 900px;
+	background-image: linear-gradient(90deg, var(--bg2) 50%,var(--bg1) 50%);
+}
+
+.content{
+	width: 95%;
+	position: relative;
+}
+
+.hero-img1{
+	height: 20vh;
+	position: absolute;
+	z-index: 1;
+}
+.hero-img2{
+	height: 100vh;
+	left: 50%;
+	position: fixed;
+	z-index: 0;
+}
+
+
+.herotxt{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: 15vh;
+	position: absolute;
+	color: var(--light);
+	font-size: 1.3rem;
+	letter-spacing: 1px;
+	z-index: 0;
+	line-height: 2.2rem;
+}
+
+.herotxt::after{
+	content: "";
+	width: 1200px;
+	height: 100%;
+	background-color: var(--bg1);
+	position: absolute;
+	z-index: -1;
+	right: 35%;
+}
+
+.more{
+	color: white;
+	z-index: 1;
+	display: block;
+	position: absolute;
+	left: 2%;
+
+	font-size: 2rem;
+	letter-spacing: 2px;
+}
+
+.more::after{
+	content:"";
+	width: 300px;
+	height: 40px;
+	color: var(--light);
+	background-color: var(--accent);
+	position: absolute;
+	right: 90%;
+	top: 50%;
+	transform: translate(0, -50%);
+	z-index: -1;
+	transition: .5s ease;
+}
+
+.more:hover:after{
+	right: -20%;
+}
+
+@media screen and (max-width: 1000px) {
+	.hero-img1{
+		/* top: 55vh; */
+		height: 15vh;
+	}
+	.herotxt{
+		width: 90%;
+		/* top: 72vh; */
+	}
+	.herotxt::after{
+		right: 50%;
+	}
+}
+
+/* HERO ANIMATION */
+
+.heroanim{
+	width: 100vw;
+	height: 93vh;
+	position: fixed;
+	transform: translateX(-50%);
+
+	background-image: url('../../img/Heroanim.webp');
+	background-position: top;
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: brightness(0.5);
+	filter: contrast(1.02);
+}
+
+@media screen and (max-width: 800px){
+	.heroanim{
+		height: 50%;
+		min-height: 400px;
+	}
+}
+
+/* SECTION 1 */
+.sec{
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	width: 98vw;
+	padding-left: 1.5vw;
+	padding-right: 1.5vw;
+
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+
+	background-color: var(--bg2);
+}
+
+.sectitle{
+	font-size: 2rem;
+	font-family: 'sBlack', Verdana, sans-serif;
+	letter-spacing: 1px;
+	color: var(--light);
+	padding-bottom: 3vh;
+	position: relative;
+}
+.sectitle::after{
+	content:"";
+	width: 50%;
+	height: 2px;
+	background-color: var(--accent);
+	position: absolute;
+	left: 0;
+	bottom: 2.5vh;
+}
+.secrow{
+	width: 100%;
+	height: 28vh;
+	min-height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.secitem{
+	flex: 1;
+	height: 100%;
+	border-radius: 4px;
+	border: solid 2px var(--bg1);
+	transition: .35s;
+	font-size: 2rem;
+	color: var(--light);
+	letter-spacing: 2px;
+	text-align: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.secitem:hover{
+	flex: 1.2;
+	background-color: var(--dark);
+	color: white;
+	letter-spacing: 5px;
+	background-blend-mode:soft-light;
+	border: solid 1px var(--accent);
+}
+
+
+
+/* SEC2 */
+#sec2{
+	padding-top: 20px;
+	border-radius: 5px;
+}
+.sec2item{
+	background-color: var(--bg1);
+	border: 2px solid var(--bg2);
+}
+
+/* SEC3 */
+
+#sec3{
+	background-color: var(--bg2);
+}
+
+/* ABOUT */
+.about{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	flex-wrap: wrap;
+	padding: 30px 2.5vw;
+
+	background-color: var(--bg2);
+}
+.about h2{
+	width: 100%;
+	color: var(--light);
+}
+.aboutleft{
+	width: 65%;
+	height: 80%;
+	padding-right: 5%;
+}
+
+.aboutright{
+	width: 35%;
+	height: 80%;
+	padding-left: 5%;
+}
+
+@media screen and (max-width: 800px) {
+	.aboutleft{
+		width: 100%;
+		padding: 0;
+	}
+	.aboutright{
+		width: 100%;
+		padding-left: 0;
+		padding-top: 20px;
+	}
+}
+
+.about p{
+	color: lightgray;
+	letter-spacing: .5px;
+}
+
+.aboutleft span{
+	font-family: 'sSemibold', Verdana, sans-serif;
+	color: var(--light);
+}
+
+/* SNS */
+
+.sns{
+	width: 100%;
+	height: 30px;
+}
+.sns a{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border-radius: 3px;
+	transition: .25s ease;
+}
+
+.sns a:hover{
+	background-color:var(--accent);
+}
+
+/* SUBSCRIBE */
+.subscribesection{
+	width: 100%;
+	background-color: var(--bg1);
+	z-index: 2;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+	.subscribesection {
+		padding-bottom: 0;
+	}
+}
+
+.subscribe{
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: var(--bg2);
+	border-radius: 5px;
+
+	padding: 0 5%;
+}
+
+@media screen and (max-width: 1000px) {
+	.subscribe {
+	  width: 100%;
+	  padding: 0;
+	  border-radius: 0;
+	}
+}
+
+.subscribe h4{
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+}
+
+.subscribe-item{
+	flex: 1;
+	height: 70px;
+
+	border: 1px solid var(--bg2);
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.subscribe-item:hover{
+	background-color: rgba(255,255,255,.01);
+}
+
+@media screen and (max-width: 1000px) {
+	.subscribe-item{
+		width: 90vw;
+	}
+}
+
+
+.input-item {
+	width: 95%;
+	height: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: transparent;
+}
+
+input[name=subscribe-input] {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	border: none;
+	outline: none;
+}
+
+.subscribe-label {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	pointer-events: none;
+	background-color: transparent;
+	overflow-x: hidden;
+}
+
+.subscribe-label span {
+	color: var(--light);
+	font-size: 1.4rem;
+	position: absolute;
+	bottom: 20px;
+	transition: all .35s ease;
+	background-color: transparent;
+}
+
+.subscribe-label::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-bottom: 2px solid var(--accent);
+	transform: translateX(-110%);
+	transition: all .35s ease;
+}
+
+.input-item input:focus+.subscribe-label span,
+.input-item input:not(:placeholder-shown)+.subscribe-label span {
+  transform: translateY(-150%);
+  color: var(--accent);
+}
+
+.input-item input:focus+.subscribe-label::after {
+  transform: translateX(0%);
+}
+
+.input-item input:not(:placeholder-shown) {
+  color: white;
+}
+
+.subscribe-button{
+	flex: 0.5;
+	transition: 0.35s ease;
+}
+
+.subscribe-button:hover{
+	flex: 1;
+	background-color: transparent;
+}
+
+.subscribe-item button {
+	width: 100%;
+	height: 80%;
+	align-self: flex-end;
+	cursor: pointer;
+	border: 1px solid var(--light);
+	outline: none;
+	letter-spacing: 1px;
+	transition: all .35s ease;
+	background-color: white;
+	color: var(--dark);
+	font-family: 'sBold', Verdana, sans-serif;
+}
+
+.subscribe-button:hover> button {
+	color: white;
+	background-color: var(--accent);
+	border: 1px solid white;
+}
+
+#bhtc:hover{
+	background-image: url('../../img/product/Baohotaychan Kwon.png');
+}
+#bhr:hover{
+	background-image: url('../../img/product/Baohorang Kwon.png');
+}
+#gg:hover{
+	background-image: url('../../img/product/Gangdam Everlast.png');
+}
+#gp:hover{
+	background-image: url('../../img/product/Giap doi khang.png');
+}
+#dqt:hover{
+	background-image: url('../../img/product/Dayquantay\ BN.png');
+}
+#m:hover{
+	background-image: url('../../img/product/Mu Apolo.png');
+}
+#kk:hover{
+	background-image: url('../../img/product/Kuki nam Unicorn.png');
+}
+#ddd:hover{
+	background-image: url('../../img/product/Dichdadon Kangrui.png');
+}
+#ddk:hover{
+	background-image: url('../../img/product/Dichdakep WTF.png');
+}
+#dd:hover{
+	background-image: url('../../img/product/Dichdam Fighter.png');
+}
+#dad:hover{
+	background-image: url('../../img/product/Daidao.png');
+}
+#dod:hover{
+	background-image: url('../../img/product/Dondao Ailaikit.png');
+}
+#k:hover{
+	background-image: url('../../img/product/Kiem.png');
+}
+#mb:hover{
+	background-image: url('../../img/product/Mocban.png');
+}
+#sd:hover{
+	background-image: url('../../img/product/Songdao.png');
+}
+#q:hover{
+	background-image: url('../../img/product/Quat.png');
+}
+#tc:hover{
+	background-image: url('../../img/product/Truongcon Ailaikit.png');
+}
+#cnk:hover{
+	background-image: url('../../img/product/Connhikhuc.png');
+}
+#d:hover{
+	background-image: url('../../img/product/Dai TanViet.png');
+}
+#vp:hover{
+	background-image: url('../../img/product/Vophuc.png');
+}
+#mt:hover{
+	background-image: url('../../img/product/Matau Ailaikit.png');
+}
