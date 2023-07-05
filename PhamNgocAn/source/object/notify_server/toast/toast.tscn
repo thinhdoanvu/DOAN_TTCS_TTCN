@@ -1,0 +1,227 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://asset/font/arial.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://asset/sprite2D/UI/success_icon_toast.png" type="Texture" id=2]
+[ext_resource path="res://asset/sprite2D/UI/close_btn_hover_toast.png" type="Texture" id=3]
+[ext_resource path="res://asset/sprite2D/UI/close_btn_icon_toast.png" type="Texture" id=4]
+[ext_resource path="res://asset/sounds/effect/notify-toast.mp3" type="AudioStream" id=5]
+[ext_resource path="res://asset/sprite2D/UI/grabber_toast.png" type="Texture" id=6]
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends Control
+enum TypeEnum {SUCCESS, INFO, WARNING, DANGER}
+export(TypeEnum) var type = TypeEnum.SUCCESS
+
+const MAX_VALUE_SILDER = 100
+const STEP_SILDER = 0.1
+const TYPE_DEFAULT = \"SUCCESS\"
+const STR_NOTIFY = \"This is a notification\"
+const THEME_DEFAULT = \"res://reuse/theme/toast/toast_time_slider.tres\"
+
+onready var _icon = $Toast/VBoxContainer/HBoxContainer/Icon
+onready var _label = $Toast/VBoxContainer/HBoxContainer/Label
+onready var _timer = $Toast/Timer
+onready var _timeSlider = $Toast/VBoxContainer/HSlider
+onready var _toastPanel = $Toast
+
+var sticky = false setget setSticky
+
+var configs = [
+	{
+		\"icon\": \"res://asset/sprite2D/UI/success_icon_toast.png\",
+		\"bg_color\": \"eaf7ee\",
+		\"border_color\": \"b6e8c2\",
+		\"color_grabber_area\": \"3fbd61\",
+		\"color_grabber_area_highlight\": \"3fbd61\",
+		\"color_slider\": \"b6e8c2\"
+	},
+	{
+		\"icon\": \"res://asset/sprite2D/UI/info_icon_toast.png\",
+		\"bg_color\": \"e6effa\",
+		\"border_color\": \"bed3eb\",
+		\"color_grabber_area\": \"006de3\",
+		\"color_grabber_area_highlight\": \"006de3\",
+		\"color_slider\": \"bed3eb\"
+	},
+	{
+		\"icon\": \"res://asset/sprite2D/UI/warning_icon_toast.png\",
+		\"bg_color\": \"fef7ea\",
+		\"border_color\": \"f0ddc1\",
+		\"color_grabber_area\": \"ee9500\",
+		\"color_grabber_area_highlight\": \"ee9500\",
+		\"color_slider\": \"f0ddc1\"
+	},
+	{
+		\"icon\": \"res://asset/sprite2D/UI/danger_icon_toast.png\",
+		\"bg_color\": \"fcede9\",
+		\"border_color\": \"ead4d0\",
+		\"color_grabber_area\": \"ed4f2c\",
+		\"color_grabber_area_highlight\": \"ed4f2c\",
+		\"color_slider\": \"ead4d0\"
+	},
+]
+
+func _ready():
+	_timeSlider.value = MAX_VALUE_SILDER
+	_timeSlider.step = STEP_SILDER
+
+func loadToast(config):
+#	LOAD THEME
+#	panel toast
+	var styleBoxFlat = load(\"res://reuse/theme/toast/toast_panel.tres\").duplicate(true)
+	
+#	time slider
+	var themeSlider = load(THEME_DEFAULT).duplicate(true)
+	var slider = themeSlider.get(\"HSlider/styles/slider\")
+	var grabberArea = themeSlider.get(\"HSlider/styles/grabber_area\")
+	var grabberAreaHighlight = themeSlider.get(\"HSlider/styles/grabber_area_highlight\")
+	
+#	===========================
+#	SETTING ICON
+	if config[\"icon\"]:
+		_icon.texture = load(config[\"icon\"])
+
+#	SETTING PANEL
+	if config[\"bg_color\"]:
+			styleBoxFlat.bg_color = Color(config[\"bg_color\"])
+	if config[\"border_color\"]:
+		styleBoxFlat.border_color = Color(config[\"border_color\"])
+	_toastPanel.set(\"custom_styles/panel\", styleBoxFlat)
+	
+#	SETTING THEME - TIME_SLIDER
+	if config[\"color_grabber_area\"] and grabberArea != null:
+		grabberArea.color = Color(config[\"color_grabber_area\"])
+
+	if config[\"color_grabber_area_highlight\"] and grabberAreaHighlight != null:
+		grabberAreaHighlight = Color(config[\"color_grabber_area_highlight\"])
+
+	if config[\"color_slider\"] and slider != null:
+		slider.color = Color(config[\"color_slider\"])
+		
+	_timeSlider.set(\"theme\", themeSlider)
+
+func _process(_delta):
+	if not sticky:
+		_timeSlider.value = _timer.time_left * MAX_VALUE_SILDER / _timer.wait_time
+
+func _on_CloseButton_button_up():
+	sticky = false
+	self.queue_free()
+
+func setContent(content: String = STR_NOTIFY) -> void:
+	_label.text = content
+
+func createToast(type_toast: String = TYPE_DEFAULT, content: String = STR_NOTIFY) -> void:
+	setContent(content)
+	loadToast(configs[TypeEnum[type_toast]])
+
+func setSticky(value: bool):
+	sticky = value
+
+func _on_Timer_timeout():
+	if not sticky:
+		self.queue_free()
+"
+
+[sub_resource type="Theme" id=9]
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.917647, 0.968627, 0.933333, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.713726, 0.909804, 0.760784, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxLine" id=3]
+color = Color( 0.25098, 0.74902, 0.384314, 1 )
+grow_begin = -8.0
+thickness = 5
+
+[sub_resource type="StyleBoxLine" id=4]
+color = Color( 0.713726, 0.909804, 0.760784, 1 )
+grow_begin = -8.0
+grow_end = -8.0
+thickness = 5
+
+[sub_resource type="Theme" id=7]
+HSlider/icons/grabber_disabled = ExtResource( 6 )
+HSlider/styles/grabber_area = SubResource( 3 )
+HSlider/styles/grabber_area_highlight = SubResource( 3 )
+HSlider/styles/slider = SubResource( 4 )
+
+[node name="ToastControl" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 350, 82 )
+script = SubResource( 6 )
+
+[node name="Toast" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 9 )
+custom_styles/panel = SubResource( 8 )
+
+[node name="Timer" type="Timer" parent="Toast"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Toast"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Toast/VBoxContainer"]
+margin_right = 350.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 0, 63 )
+
+[node name="Icon" type="TextureRect" parent="Toast/VBoxContainer/HBoxContainer"]
+margin_right = 63.0
+margin_bottom = 63.0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 31, 31 )
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Toast/VBoxContainer/HBoxContainer"]
+margin_left = 67.0
+margin_right = 283.0
+margin_bottom = 63.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "This is toast"
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="CloseButton" type="TextureButton" parent="Toast/VBoxContainer/HBoxContainer"]
+margin_left = 287.0
+margin_right = 350.0
+margin_bottom = 63.0
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+
+[node name="HSlider" type="HSlider" parent="Toast/VBoxContainer"]
+margin_top = 67.0
+margin_right = 350.0
+margin_bottom = 83.0
+theme = SubResource( 7 )
+value = 1.0
+editable = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[connection signal="timeout" from="Toast/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="button_up" from="Toast/VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_CloseButton_button_up"]

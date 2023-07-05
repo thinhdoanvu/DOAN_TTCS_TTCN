@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chat_ThucHanhCamDien_frame5.mp3-6d732d3bfb837de207bb648b33fb4dee.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame5/chat/chat_ThucHanhCamDien_frame5.mp3"
+dest_files=[ "res://.import/chat_ThucHanhCamDien_frame5.mp3-6d732d3bfb837de207bb648b33fb4dee.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

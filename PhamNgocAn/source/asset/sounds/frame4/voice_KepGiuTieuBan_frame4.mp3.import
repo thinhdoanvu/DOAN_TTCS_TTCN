@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_KepGiuTieuBan_frame4.mp3-73035028bfe992a6db1b732c188f3b25.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame4/voice_KepGiuTieuBan_frame4.mp3"
+dest_files=[ "res://.import/voice_KepGiuTieuBan_frame4.mp3-73035028bfe992a6db1b732c188f3b25.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

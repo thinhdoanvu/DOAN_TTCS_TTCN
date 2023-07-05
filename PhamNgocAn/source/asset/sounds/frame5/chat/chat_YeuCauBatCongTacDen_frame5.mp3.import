@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chat_YeuCauBatCongTacDen_frame5.mp3-e9eecc3beb16ab0088523654451c6603.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame5/chat/chat_YeuCauBatCongTacDen_frame5.mp3"
+dest_files=[ "res://.import/chat_YeuCauBatCongTacDen_frame5.mp3-e9eecc3beb16ab0088523654451c6603.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

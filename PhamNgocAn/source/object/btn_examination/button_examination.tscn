@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://asset/font/Roboto-Black.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://reuse/theme/login.tres" type="Theme" id=2]
+[ext_resource path="res://object/btn_examination/button_examination.gd" type="Script" id=3]
+[ext_resource path="res://asset/sounds/effect/hover_btn.mp3" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 27
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="ButtonExamination" type="Button"]
+margin_right = 181.0
+margin_bottom = 64.0
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
+text = "KIỂM TRA"
+script = ExtResource( 3 )
+hover_sound = ExtResource( 4 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_ButtonExamination_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_ButtonExamination_mouse_exited"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_OcChinhTho_frame4.mp3-d3be99e6f1b64d122a48e18b4bf2f4ac.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame4/voice_OcChinhTho_frame4.mp3"
+dest_files=[ "res://.import/voice_OcChinhTho_frame4.mp3-d3be99e6f1b64d122a48e18b4bf2f4ac.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

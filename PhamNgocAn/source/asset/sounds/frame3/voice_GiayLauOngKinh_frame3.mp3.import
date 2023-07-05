@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_GiayLauOngKinh_frame3.mp3-928f749cd6e8b171fa95c1d2aeb922bc.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame3/voice_GiayLauOngKinh_frame3.mp3"
+dest_files=[ "res://.import/voice_GiayLauOngKinh_frame3.mp3-928f749cd6e8b171fa95c1d2aeb922bc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

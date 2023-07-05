@@ -1,0 +1,676 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://object/user_interface/user_interface.tscn" type="PackedScene" id=1]
+[ext_resource path="res://asset/sprite2D/UI/bg_main.png" type="Texture" id=2]
+[ext_resource path="res://asset/sprite2D/lab/GiayLauOngKinh.png" type="Texture" id=3]
+[ext_resource path="res://object/notify_server/notify_server.tscn" type="PackedScene" id=4]
+[ext_resource path="res://asset/sprite2D/lab/DauSoiKinh.png" type="Texture" id=5]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/NutChinhThuCap_Mark.png" type="Texture" id=6]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/ThiKinh_Mark-1.png" type="Texture" id=7]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/TieuXa_Mark.png" type="Texture" id=8]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/ThanKinh_Mark.png" type="Texture" id=9]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/OcChinhTieuXa_Mark.png" type="Texture" id=10]
+[ext_resource path="res://object/hand_cursor/hand_cursor.tscn" type="PackedScene" id=11]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/OcChinhDoSang_Mark.png" type="Texture" id=12]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/TuQuang_Mark.png" type="Texture" id=13]
+[ext_resource path="res://reuse/materials/outline.gdshader" type="Shader" id=14]
+[ext_resource path="res://scene/frame4/display_information_microscope.gd" type="Script" id=15]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/VatKinh_Mark.png" type="Texture" id=16]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/DiaMangVatKinh_Mark.png" type="Texture" id=17]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/ChanDe_Mark.png" type="Texture" id=18]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/Den_Mark.png" type="Texture" id=19]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/NutChinhSoCap_Mark.png" type="Texture" id=20]
+[ext_resource path="res://asset/sprite2D/lab/KHV_258x436.png" type="Texture" id=21]
+[ext_resource path="res://asset/sprite2D/lab/KHV_Mark/BanDeMau_Mark.png" type="Texture" id=22]
+[ext_resource path="res://object/tick_button/tick_button.tscn" type="PackedScene" id=23]
+[ext_resource path="res://object/dialog/dialog_right.tscn" type="PackedScene" id=25]
+[ext_resource path="res://object/alert/alert.tscn" type="PackedScene" id=26]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 14 )
+shader_param/width = 2.0
+shader_param/outline_color = null
+
+[sub_resource type="Animation" id=4]
+resource_name = "BAN_MANG_VAT_MAU"
+length = 10.3
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "banMangVatMau"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "CHAN_KINH"
+length = 6.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "chanKinh"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "GIOI_THIEU"
+length = 12.3
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "gioiThieu"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/HandCursor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 12.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1143, 173 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/HandCursor:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 12.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "KET_THUC"
+length = 7.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "ketThuc"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/HandCursor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 7 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1143, 173 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/HandCursor:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 7 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CanvasLayer/HandCursor:mode")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 7 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "MAM_VAT_KINH"
+length = 10.5
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "mamVatKinh"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "NGUON_SANG"
+length = 8.7
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "nguonSang"
+} ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "OC_CHINH_DO_SANG"
+length = 11.2
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "ocChinhDoSang"
+} ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "OC_DI_CHUYEN_TIEU_XA"
+length = 10.2
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "ocDiChuyenTieuXa"
+} ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "OC_SO_CAP"
+length = 10.5
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "ocSoCap"
+} ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "OC_VI_CAP"
+length = 12.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "ocViCap"
+} ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/HandCursor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1143, 173 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/HandCursor:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/HandCursor:mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "THAN_KINH"
+length = 6.3
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "thanKinh"
+} ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "THI_KINH"
+length = 9.6
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "thiKinh"
+} ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "TIEU_XA"
+length = 15.7
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "tieuXa"
+} ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "TU_QUANG"
+length = 8.7
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "tuQuang"
+} ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "VAT_KINH"
+length = 11.7
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "vatKinh"
+} ]
+}
+
+[node name="CauTaoVaHoatDongCuaKHV" type="Node"]
+script = ExtResource( 15 )
+
+[node name="Interface" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="TextureRect" parent="Interface"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Item" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+
+[node name="KinhHienViMarks" type="Sprite" parent="Item"]
+material = SubResource( 2 )
+position = Vector2( -85.35, -368.5 )
+texture = ExtResource( 21 )
+
+[node name="BanMangVatMau" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( -8, -13 )
+texture = ExtResource( 22 )
+
+[node name="ChanKinh" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( -2, 134 )
+texture = ExtResource( 18 )
+
+[node name="NguonSang" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( -8, 84 )
+texture = ExtResource( 19 )
+
+[node name="MamVatKinh" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( -8, -101 )
+texture = ExtResource( 17 )
+
+[node name="OcSoCap" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( 107, 31 )
+texture = ExtResource( 20 )
+
+[node name="OcViCap" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( 125, 35 )
+texture = ExtResource( 6 )
+
+[node name="OcChinhDoSang" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( -48, 82 )
+texture = ExtResource( 12 )
+
+[node name="OcDiChuyenTieuXa" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( 69, 56 )
+texture = ExtResource( 10 )
+
+[node name="ThanKinh" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( 38, -21 )
+texture = ExtResource( 9 )
+
+[node name="ThiKinh" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( -69, -181 )
+texture = ExtResource( 7 )
+
+[node name="TieuXa" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( 20, -33 )
+texture = ExtResource( 8 )
+
+[node name="TuQuang" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( -5, 37 )
+texture = ExtResource( 13 )
+
+[node name="VatKinh" type="Sprite" parent="Item/KinhHienViMarks"]
+visible = false
+position = Vector2( -24, -66 )
+texture = ExtResource( 16 )
+
+[node name="GiayLauOngKinh" type="Sprite" parent="Item"]
+position = Vector2( 203, -250 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="DauSoiKinh" type="Sprite" parent="Item"]
+position = Vector2( -395.3, -251.9 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+
+[node name="DauSoiKinh2" type="Sprite" parent="Item"]
+position = Vector2( -339.35, -252.5 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+
+[node name="ContaiterButtonTick" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BanMangVatMau" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 316.0
+margin_top = 311.0
+margin_right = 363.0
+margin_bottom = 358.0
+isDrawLine = true
+
+[node name="Position2D" parent="ContaiterButtonTick/BanMangVatMau" index="0"]
+position = Vector2( 108, 7 )
+
+[node name="ChanKinh" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 437.0
+margin_top = 465.0
+margin_right = 484.0
+margin_bottom = 512.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NguonSang" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 498.0
+margin_top = 417.0
+margin_right = 545.0
+margin_bottom = 464.0
+
+[node name="MamVatKinh" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 498.0
+margin_top = 192.0
+margin_right = 545.0
+margin_bottom = 239.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OcSoCap" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 681.0
+margin_top = 280.0
+margin_right = 728.0
+margin_bottom = 327.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+isDrawLine = true
+
+[node name="Position2D" parent="ContaiterButtonTick/OcSoCap" index="0"]
+position = Vector2( -46, 64 )
+
+[node name="OcViCap" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 700.0
+margin_top = 361.0
+margin_right = 747.0
+margin_bottom = 408.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+isDrawLine = true
+
+[node name="Position2D" parent="ContaiterButtonTick/OcViCap" index="0"]
+position = Vector2( -49, 11 )
+
+[node name="OcChinhDoSang" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 388.0
+margin_top = 370.0
+margin_right = 435.0
+margin_bottom = 417.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+isDrawLine = true
+
+[node name="Position2D" parent="ContaiterButtonTick/OcChinhDoSang" index="0"]
+position = Vector2( 78, 47 )
+
+[node name="OcDiChuyenTieuXa" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 567.0
+margin_top = 395.0
+margin_right = 614.0
+margin_bottom = 442.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ThanKinh" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 605.0
+margin_top = 204.0
+margin_right = 652.0
+margin_bottom = 251.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ThiKinh" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 376.0
+margin_top = 80.0
+margin_right = 423.0
+margin_bottom = 127.0
+
+[node name="TieuXa" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 575.0
+margin_top = 274.0
+margin_right = 622.0
+margin_bottom = 321.0
+
+[node name="TuQuang" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 453.0
+margin_top = 346.0
+margin_right = 500.0
+margin_bottom = 393.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VatKinh" parent="ContaiterButtonTick" instance=ExtResource( 23 )]
+margin_left = 414.0
+margin_top = 230.0
+margin_right = 461.0
+margin_bottom = 277.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Alert" parent="CanvasLayer" instance=ExtResource( 26 )]
+text = "ALERT"
+
+[node name="Dialog" parent="CanvasLayer" instance=ExtResource( 25 )]
+unique_name_in_owner = true
+visible = false
+mouse_filter = 2
+is_show_btn_close = false
+
+[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 1 )]
+
+[node name="NotifyServer" parent="CanvasLayer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+
+[node name="HandCursor" parent="CanvasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1143, 173 )
+mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/BAN_MANG_VAT_MAU = SubResource( 4 )
+anims/CHAN_KINH = SubResource( 5 )
+anims/GIOI_THIEU = SubResource( 3 )
+anims/KET_THUC = SubResource( 18 )
+anims/MAM_VAT_KINH = SubResource( 7 )
+anims/NGUON_SANG = SubResource( 6 )
+anims/OC_CHINH_DO_SANG = SubResource( 10 )
+anims/OC_DI_CHUYEN_TIEU_XA = SubResource( 11 )
+anims/OC_SO_CAP = SubResource( 8 )
+anims/OC_VI_CAP = SubResource( 9 )
+anims/RESET = SubResource( 17 )
+anims/THAN_KINH = SubResource( 12 )
+anims/THI_KINH = SubResource( 13 )
+anims/TIEU_XA = SubResource( 14 )
+anims/TU_QUANG = SubResource( 15 )
+anims/VAT_KINH = SubResource( 16 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+[editable path="ContaiterButtonTick/BanMangVatMau"]
+[editable path="ContaiterButtonTick/OcSoCap"]
+[editable path="ContaiterButtonTick/OcViCap"]
+[editable path="ContaiterButtonTick/OcChinhDoSang"]
+[editable path="CanvasLayer/Dialog"]

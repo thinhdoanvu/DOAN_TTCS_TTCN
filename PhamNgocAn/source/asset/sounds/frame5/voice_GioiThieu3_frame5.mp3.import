@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_GioiThieu3_frame5.mp3-d633675fc3af88de7a36a72b47bd7f6f.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame5/voice_GioiThieu3_frame5.mp3"
+dest_files=[ "res://.import/voice_GioiThieu3_frame5.mp3-d633675fc3af88de7a36a72b47bd7f6f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

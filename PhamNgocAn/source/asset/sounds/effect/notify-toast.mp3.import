@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/notify-toast.mp3-fb7268b56064e489f0493280c2ab5581.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/effect/notify-toast.mp3"
+dest_files=[ "res://.import/notify-toast.mp3-fb7268b56064e489f0493280c2ab5581.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

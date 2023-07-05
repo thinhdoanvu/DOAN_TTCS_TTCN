@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tick_sound.mp3-e8065c6fc5990d21421c42740ff06e08.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/effect/tick_sound.mp3"
+dest_files=[ "res://.import/tick_sound.mp3-e8065c6fc5990d21421c42740ff06e08.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

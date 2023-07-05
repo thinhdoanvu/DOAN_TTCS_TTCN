@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_Buoc1_ChuanBiKinh_frame5.mp3-e1a6c44ab39acec4266081ff4b406dc9.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame5/voice_Buoc1_ChuanBiKinh_frame5.mp3"
+dest_files=[ "res://.import/voice_Buoc1_ChuanBiKinh_frame5.mp3-e1a6c44ab39acec4266081ff4b406dc9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

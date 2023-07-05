@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice_LamKinh_frame3.mp3-38da63e11ccdd21ce2a5955c17e78832.mp3str"
+
+[deps]
+
+source_file="res://asset/sounds/frame3/voice_LamKinh_frame3.mp3"
+dest_files=[ "res://.import/voice_LamKinh_frame3.mp3-38da63e11ccdd21ce2a5955c17e78832.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
